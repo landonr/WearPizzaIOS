@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		718F42561B572957000E0AA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718F42551B572957000E0AA2 /* AppDelegate.swift */; };
+		718F42581B572957000E0AA2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718F42571B572957000E0AA2 /* FirstViewController.swift */; };
+		718F425A1B572957000E0AA2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718F42591B572957000E0AA2 /* SecondViewController.swift */; };
+		718F425D1B572957000E0AA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 718F425B1B572957000E0AA2 /* Main.storyboard */; };
+		718F425F1B572957000E0AA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 718F425E1B572957000E0AA2 /* Images.xcassets */; };
+		718F42621B572957000E0AA2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 718F42601B572957000E0AA2 /* LaunchScreen.xib */; };
+		718F426E1B572957000E0AA2 /* WearPizzaIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718F426D1B572957000E0AA2 /* WearPizzaIOSTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		718F42681B572957000E0AA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 718F42481B572957000E0AA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 718F424F1B572957000E0AA2;
+			remoteInfo = WearPizzaIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		718F42501B572957000E0AA2 /* WearPizzaIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WearPizzaIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		718F42541B572957000E0AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		718F42551B572957000E0AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		718F42571B572957000E0AA2 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		718F42591B572957000E0AA2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		718F425C1B572957000E0AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		718F425E1B572957000E0AA2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		718F42611B572957000E0AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		718F42671B572957000E0AA2 /* WearPizzaIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WearPizzaIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		718F426C1B572957000E0AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		718F426D1B572957000E0AA2 /* WearPizzaIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WearPizzaIOSTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		718F424D1B572957000E0AA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718F42641B572957000E0AA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		718F42471B572957000E0AA2 = {
+			isa = PBXGroup;
+			children = (
+				718F42521B572957000E0AA2 /* WearPizzaIOS */,
+				718F426A1B572957000E0AA2 /* WearPizzaIOSTests */,
+				718F42511B572957000E0AA2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		718F42511B572957000E0AA2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				718F42501B572957000E0AA2 /* WearPizzaIOS.app */,
+				718F42671B572957000E0AA2 /* WearPizzaIOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		718F42521B572957000E0AA2 /* WearPizzaIOS */ = {
+			isa = PBXGroup;
+			children = (
+				718F42551B572957000E0AA2 /* AppDelegate.swift */,
+				718F42571B572957000E0AA2 /* FirstViewController.swift */,
+				718F42591B572957000E0AA2 /* SecondViewController.swift */,
+				718F425B1B572957000E0AA2 /* Main.storyboard */,
+				718F425E1B572957000E0AA2 /* Images.xcassets */,
+				718F42601B572957000E0AA2 /* LaunchScreen.xib */,
+				718F42531B572957000E0AA2 /* Supporting Files */,
+			);
+			path = WearPizzaIOS;
+			sourceTree = "<group>";
+		};
+		718F42531B572957000E0AA2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				718F42541B572957000E0AA2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		718F426A1B572957000E0AA2 /* WearPizzaIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				718F426D1B572957000E0AA2 /* WearPizzaIOSTests.swift */,
+				718F426B1B572957000E0AA2 /* Supporting Files */,
+			);
+			path = WearPizzaIOSTests;
+			sourceTree = "<group>";
+		};
+		718F426B1B572957000E0AA2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				718F426C1B572957000E0AA2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		718F424F1B572957000E0AA2 /* WearPizzaIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 718F42711B572957000E0AA2 /* Build configuration list for PBXNativeTarget "WearPizzaIOS" */;
+			buildPhases = (
+				718F424C1B572957000E0AA2 /* Sources */,
+				718F424D1B572957000E0AA2 /* Frameworks */,
+				718F424E1B572957000E0AA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WearPizzaIOS;
+			productName = WearPizzaIOS;
+			productReference = 718F42501B572957000E0AA2 /* WearPizzaIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		718F42661B572957000E0AA2 /* WearPizzaIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 718F42741B572957000E0AA2 /* Build configuration list for PBXNativeTarget "WearPizzaIOSTests" */;
+			buildPhases = (
+				718F42631B572957000E0AA2 /* Sources */,
+				718F42641B572957000E0AA2 /* Frameworks */,
+				718F42651B572957000E0AA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				718F42691B572957000E0AA2 /* PBXTargetDependency */,
+			);
+			name = WearPizzaIOSTests;
+			productName = WearPizzaIOSTests;
+			productReference = 718F42671B572957000E0AA2 /* WearPizzaIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		718F42481B572957000E0AA2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Kale Baiton";
+				TargetAttributes = {
+					718F424F1B572957000E0AA2 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					718F42661B572957000E0AA2 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 718F424F1B572957000E0AA2;
+					};
+				};
+			};
+			buildConfigurationList = 718F424B1B572957000E0AA2 /* Build configuration list for PBXProject "WearPizzaIOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 718F42471B572957000E0AA2;
+			productRefGroup = 718F42511B572957000E0AA2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				718F424F1B572957000E0AA2 /* WearPizzaIOS */,
+				718F42661B572957000E0AA2 /* WearPizzaIOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		718F424E1B572957000E0AA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				718F425D1B572957000E0AA2 /* Main.storyboard in Resources */,
+				718F42621B572957000E0AA2 /* LaunchScreen.xib in Resources */,
+				718F425F1B572957000E0AA2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718F42651B572957000E0AA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		718F424C1B572957000E0AA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				718F425A1B572957000E0AA2 /* SecondViewController.swift in Sources */,
+				718F42561B572957000E0AA2 /* AppDelegate.swift in Sources */,
+				718F42581B572957000E0AA2 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718F42631B572957000E0AA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				718F426E1B572957000E0AA2 /* WearPizzaIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		718F42691B572957000E0AA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 718F424F1B572957000E0AA2 /* WearPizzaIOS */;
+			targetProxy = 718F42681B572957000E0AA2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		718F425B1B572957000E0AA2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				718F425C1B572957000E0AA2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		718F42601B572957000E0AA2 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				718F42611B572957000E0AA2 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		718F426F1B572957000E0AA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		718F42701B572957000E0AA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		718F42721B572957000E0AA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WearPizzaIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		718F42731B572957000E0AA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WearPizzaIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		718F42751B572957000E0AA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WearPizzaIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WearPizzaIOS.app/WearPizzaIOS";
+			};
+			name = Debug;
+		};
+		718F42761B572957000E0AA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WearPizzaIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WearPizzaIOS.app/WearPizzaIOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		718F424B1B572957000E0AA2 /* Build configuration list for PBXProject "WearPizzaIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				718F426F1B572957000E0AA2 /* Debug */,
+				718F42701B572957000E0AA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		718F42711B572957000E0AA2 /* Build configuration list for PBXNativeTarget "WearPizzaIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				718F42721B572957000E0AA2 /* Debug */,
+				718F42731B572957000E0AA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		718F42741B572957000E0AA2 /* Build configuration list for PBXNativeTarget "WearPizzaIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				718F42751B572957000E0AA2 /* Debug */,
+				718F42761B572957000E0AA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 718F42481B572957000E0AA2 /* Project object */;
+}
