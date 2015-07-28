@@ -14,6 +14,8 @@
 		718F425F1B572957000E0AA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 718F425E1B572957000E0AA2 /* Images.xcassets */; };
 		718F42621B572957000E0AA2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 718F42601B572957000E0AA2 /* LaunchScreen.xib */; };
 		718F426E1B572957000E0AA2 /* WearPizzaIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718F426D1B572957000E0AA2 /* WearPizzaIOSTests.swift */; };
+		8F1437281B674621005E1D8C /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1437261B674621005E1D8C /* HTTP.swift */; };
+		8F1437291B674621005E1D8C /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1437271B674621005E1D8C /* ApiManager.swift */; };
 		8FA5DFDB1B5F2D390007D241 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA5DFDA1B5F2D390007D241 /* MapKit.framework */; };
 		8FA5DFDD1B61C2060007D241 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA5DFDC1B61C2060007D241 /* AddLocationViewController.swift */; };
 		8FA5DFDF1B61C8790007D241 /* AddLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA5DFDE1B61C8790007D241 /* AddLocationView.xib */; };
@@ -42,6 +44,8 @@
 		718F42671B572957000E0AA2 /* WearPizzaIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WearPizzaIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		718F426C1B572957000E0AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		718F426D1B572957000E0AA2 /* WearPizzaIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WearPizzaIOSTests.swift; sourceTree = "<group>"; };
+		8F1437261B674621005E1D8C /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		8F1437271B674621005E1D8C /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		8FA5DFDA1B5F2D390007D241 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8FA5DFDC1B61C2060007D241 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		8FA5DFDE1B61C8790007D241 /* AddLocationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLocationView.xib; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 		718F42521B572957000E0AA2 /* WearPizzaIOS */ = {
 			isa = PBXGroup;
 			children = (
+				8F1437261B674621005E1D8C /* HTTP.swift */,
+				8F1437271B674621005E1D8C /* ApiManager.swift */,
 				8FA5DFE01B63EA780007D241 /* UIColorExtension.swift */,
 				718F42551B572957000E0AA2 /* AppDelegate.swift */,
 				718F42591B572957000E0AA2 /* SecondViewController.swift */,
@@ -232,6 +238,8 @@
 				718F425A1B572957000E0AA2 /* SecondViewController.swift in Sources */,
 				718F42561B572957000E0AA2 /* AppDelegate.swift in Sources */,
 				8FA5DFE11B63EA780007D241 /* UIColorExtension.swift in Sources */,
+				8F1437291B674621005E1D8C /* ApiManager.swift in Sources */,
+				8F1437281B674621005E1D8C /* HTTP.swift in Sources */,
 				718F42581B572957000E0AA2 /* LocationsViewController.swift in Sources */,
 				8FA5DFDD1B61C2060007D241 /* AddLocationViewController.swift in Sources */,
 			);

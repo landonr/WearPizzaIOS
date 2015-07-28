@@ -53,6 +53,17 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate {
                     self.addLocationView.loadLocations()
             })
         }
+        
+        
+        var address:NSDictionary = [
+            "city":      "regina",
+            "postalCode":   "s4v0j5",
+            "address":      "87 noonan rd",
+            "province":     "saskatchewan",
+            "type":         "delivery"]
+        pza.findStores(address as! Dictionary<String, String>, callback: { ()->Void in
+            println("ayy")
+        })
         //self.presentViewController(vc, animated: true, completion: nil)
     }
 }

@@ -42,8 +42,8 @@ class AddLocationView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
         
         let userLocation = mapView.userLocation
         
-        let region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 2000, 2000)
+        //let region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 2000, 2000)
         
-        mapView.setRegion(region, animated: true)
+        //mapView.setRegion(region, animated: true)
     }
 }
