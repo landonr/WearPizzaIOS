@@ -14,12 +14,14 @@
 		718F425F1B572957000E0AA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 718F425E1B572957000E0AA2 /* Images.xcassets */; };
 		718F42621B572957000E0AA2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 718F42601B572957000E0AA2 /* LaunchScreen.xib */; };
 		718F426E1B572957000E0AA2 /* WearPizzaIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718F426D1B572957000E0AA2 /* WearPizzaIOSTests.swift */; };
+		71A2FA381B69D67F0095D047 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2FA371B69D67F0095D047 /* Store.swift */; };
 		8F1437281B674621005E1D8C /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1437261B674621005E1D8C /* HTTP.swift */; };
 		8F1437291B674621005E1D8C /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1437271B674621005E1D8C /* ApiManager.swift */; };
 		8FA5DFDB1B5F2D390007D241 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA5DFDA1B5F2D390007D241 /* MapKit.framework */; };
 		8FA5DFDD1B61C2060007D241 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA5DFDC1B61C2060007D241 /* AddLocationViewController.swift */; };
 		8FA5DFDF1B61C8790007D241 /* AddLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA5DFDE1B61C8790007D241 /* AddLocationView.xib */; };
 		8FA5DFE11B63EA780007D241 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA5DFE01B63EA780007D241 /* UIColorExtension.swift */; };
+		CB0B7CB127D3FBA071949D9F /* Pods_WearPizzaIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501367CF39049CE66828BB7 /* Pods_WearPizzaIOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5501367CF39049CE66828BB7 /* Pods_WearPizzaIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WearPizzaIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55F7EF22489F80D56F56BF9A /* Pods-WearPizzaIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearPizzaIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WearPizzaIOS/Pods-WearPizzaIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		6B6F1235574150F464C77E78 /* Pods-WearPizzaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearPizzaIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-WearPizzaIOS/Pods-WearPizzaIOS.release.xcconfig"; sourceTree = "<group>"; };
 		718F42501B572957000E0AA2 /* WearPizzaIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WearPizzaIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		718F42541B572957000E0AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		718F42551B572957000E0AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +49,7 @@
 		718F42671B572957000E0AA2 /* WearPizzaIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WearPizzaIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		718F426C1B572957000E0AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		718F426D1B572957000E0AA2 /* WearPizzaIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WearPizzaIOSTests.swift; sourceTree = "<group>"; };
+		71A2FA371B69D67F0095D047 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		8F1437261B674621005E1D8C /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		8F1437271B674621005E1D8C /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		8FA5DFDA1B5F2D390007D241 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -58,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FA5DFDB1B5F2D390007D241 /* MapKit.framework in Frameworks */,
+				CB0B7CB127D3FBA071949D9F /* Pods_WearPizzaIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E4EC2A0AFFCC941DEB6A6D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5501367CF39049CE66828BB7 /* Pods_WearPizzaIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		718F42471B572957000E0AA2 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +93,8 @@
 				718F42521B572957000E0AA2 /* WearPizzaIOS */,
 				718F426A1B572957000E0AA2 /* WearPizzaIOSTests */,
 				718F42511B572957000E0AA2 /* Products */,
+				7353FC2F20FD0C8A3D0E4B8C /* Pods */,
+				6E4EC2A0AFFCC941DEB6A6D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +110,7 @@
 		718F42521B572957000E0AA2 /* WearPizzaIOS */ = {
 			isa = PBXGroup;
 			children = (
+				71A2FA361B69D5BF0095D047 /* Models */,
 				8F1437261B674621005E1D8C /* HTTP.swift */,
 				8F1437271B674621005E1D8C /* ApiManager.swift */,
 				8FA5DFE01B63EA780007D241 /* UIColorExtension.swift */,
@@ -134,6 +152,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		71A2FA361B69D5BF0095D047 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				71A2FA371B69D67F0095D047 /* Store.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7353FC2F20FD0C8A3D0E4B8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55F7EF22489F80D56F56BF9A /* Pods-WearPizzaIOS.debug.xcconfig */,
+				6B6F1235574150F464C77E78 /* Pods-WearPizzaIOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 718F42711B572957000E0AA2 /* Build configuration list for PBXNativeTarget "WearPizzaIOS" */;
 			buildPhases = (
+				BF1C59E8A9662AC1E706DFB3 /* Check Pods Manifest.lock */,
 				718F424C1B572957000E0AA2 /* Sources */,
 				718F424D1B572957000E0AA2 /* Frameworks */,
 				718F424E1B572957000E0AA2 /* Resources */,
+				D448D15785787E23E3C27A34 /* Embed Pods Frameworks */,
+				01E3F9D1513F6B56488BDCBB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +268,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01E3F9D1513F6B56488BDCBB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WearPizzaIOS/Pods-WearPizzaIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF1C59E8A9662AC1E706DFB3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D448D15785787E23E3C27A34 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WearPizzaIOS/Pods-WearPizzaIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		718F424C1B572957000E0AA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -238,6 +324,7 @@
 				718F425A1B572957000E0AA2 /* SecondViewController.swift in Sources */,
 				718F42561B572957000E0AA2 /* AppDelegate.swift in Sources */,
 				8FA5DFE11B63EA780007D241 /* UIColorExtension.swift in Sources */,
+				71A2FA381B69D67F0095D047 /* Store.swift in Sources */,
 				8F1437291B674621005E1D8C /* ApiManager.swift in Sources */,
 				8F1437281B674621005E1D8C /* HTTP.swift in Sources */,
 				718F42581B572957000E0AA2 /* LocationsViewController.swift in Sources */,
@@ -368,6 +455,7 @@
 		};
 		718F42721B572957000E0AA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55F7EF22489F80D56F56BF9A /* Pods-WearPizzaIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WearPizzaIOS/Info.plist;
@@ -378,6 +466,7 @@
 		};
 		718F42731B572957000E0AA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B6F1235574150F464C77E78 /* Pods-WearPizzaIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WearPizzaIOS/Info.plist;

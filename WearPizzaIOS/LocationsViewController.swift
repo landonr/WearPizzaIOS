@@ -61,8 +61,9 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate {
             "address":      "87 noonan rd",
             "province":     "saskatchewan",
             "type":         "delivery"]
-        pza.findStores(address as! Dictionary<String, String>, callback: { ()->Void in
-            println("ayy")
+        pza.findStores(address as! Dictionary<String, String>, callback: {(stores : [Store])->Void in
+            
+            println(stores)
         })
         //self.presentViewController(vc, animated: true, completion: nil)
     }

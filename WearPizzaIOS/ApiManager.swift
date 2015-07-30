@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import SwiftyJSON
 
 var pza = ApiManager()
 
@@ -19,7 +20,7 @@ class ApiManager {
         return components!.string!
     }
     
-    func findStores(address: Dictionary<String, String>, callback : ()->Void) {
+    func findStores(address: Dictionary<String, String>, callback : ([Store])->Void) {
         var url = pza + "/findStore"
         url = queryDictionary(url, queryDictionary: address)
         let request = api.createGetRequest(NSURL(string: url)!)
@@ -27,8 +28,17 @@ class ApiManager {
         //queryDictionary(url, queryDictionary: address)
         
         api.makeRequestDictionary(request, callback:  { (result : Dictionary<String, AnyObject>) -> Void in
-            println(result)
-            callback()
+            //println(result)
+            var json = JSON(result)
+            var storeJson : JSON = json["result"]["Stores"]
+            var storeArray : [Store] = [Store]()
+            for (key: String, subJson: JSON) in storeJson {
+                var newStore : Store = Store()
+                newStore.initWithJSON(subJson)
+                storeArray.append(newStore)
+            }
+            
+            callback(storeArray)
         })
     }
 }
