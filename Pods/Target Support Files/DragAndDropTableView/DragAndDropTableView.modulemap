@@ -1,0 +1,6 @@
+framework module DragAndDropTableView {
+  umbrella header "DragAndDropTableView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,10 +1,13 @@
 PODS:
+  - DragAndDropTableView (0.1.10)
   - SwiftyJSON (2.2.1)
 
 DEPENDENCIES:
+  - DragAndDropTableView (~> 0.1.8)
   - SwiftyJSON (~> 2.2.1)
 
 SPEC CHECKSUMS:
+  DragAndDropTableView: 78b0147e6aef3c7f07482dd3ad310002e80fc9da
   SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
 
 COCOAPODS: 0.38.2

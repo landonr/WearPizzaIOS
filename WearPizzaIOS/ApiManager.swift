@@ -6,8 +6,7 @@ var pza = ApiManager()
 
 class ApiManager {
     
-    let pza : String = "http://pizzaplanet.herokuapp.com"
-    //let pza : String = "http://localhost:5000"
+    let pza : String = "https://order.dominos.ca/power/"
 
     func queryDictionary(url: String, queryDictionary: Dictionary<String, String>) -> String
     {
@@ -20,17 +19,16 @@ class ApiManager {
         return components!.string!
     }
     
-    func findStores(address: Dictionary<String, String>, callback : ([Store])->Void) {
-        var url = pza + "/findStore"
-        url = queryDictionary(url, queryDictionary: address)
+    func findStores(request: String, callback : ([Store])->Void) {
+        var url = pza + "store-locator?"
+        url += request as String
         let request = api.createGetRequest(NSURL(string: url)!)
         println(request)
         //queryDictionary(url, queryDictionary: address)
         
         api.makeRequestDictionary(request, callback:  { (result : Dictionary<String, AnyObject>) -> Void in
-            //println(result)
             var json = JSON(result)
-            var storeJson : JSON = json["result"]["Stores"]
+            var storeJson : JSON = json["Stores"]
             var storeArray : [Store] = [Store]()
             for (key: String, subJson: JSON) in storeJson {
                 var newStore : Store = Store()

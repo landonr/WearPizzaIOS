@@ -79,8 +79,12 @@ public class HTTP : NSObject {
             var err : NSError?
 
             if results.length != 0 {
-                var jsonResults = NSJSONSerialization.JSONObjectWithData(results, options: NSJSONReadingOptions.MutableContainers, error: &err) as! Dictionary<String, AnyObject>
-                callback(jsonResults)
+                if let jsonResults = NSJSONSerialization.JSONObjectWithData(results, options: NSJSONReadingOptions.MutableContainers, error: &err) as? Dictionary<String, AnyObject> {
+                    callback(jsonResults)
+                } else {
+                    var jsonResults: Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
+                    callback(jsonResults);
+                }
             }
             else {
                 var jsonResults: Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()

@@ -10,6 +10,18 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vzj-IT-dld">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XEN-iF-y9V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scg-oh-rny">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" red="0.86274509803921573" green="0.33333333333333331" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pau-Lb-TfN">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
@@ -27,7 +39,7 @@
                                 </mapView>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="g5f-Sy-CoG">
                                     <rect key="frame" x="0.0" y="300" width="570" height="201"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="400" id="ipp-yC-9Wf"/>
                                     </constraints>
@@ -36,6 +48,10 @@
                                             <exclude reference="ipp-yC-9Wf"/>
                                         </mask>
                                     </variation>
+                                    <connections>
+                                        <outlet property="dataSource" destination="gqs-4M-mUT" id="vbd-b6-mIb"/>
+                                        <outlet property="delegate" destination="gqs-4M-mUT" id="Dcd-Ma-KJS"/>
+                                    </connections>
                                 </tableView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,9 +64,14 @@
                                 <constraint firstAttribute="trailing" secondItem="g5f-Sy-CoG" secondAttribute="trailing" id="xtE-p5-6cC"/>
                                 <constraint firstAttribute="trailing" secondItem="Htv-TJ-9PU" secondAttribute="trailing" id="zm6-ui-5Tp"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.86274509799999999" green="0.33333333329999998" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="gwF-JM-5nr" firstAttribute="leading" secondItem="pau-Lb-TfN" secondAttribute="leading" constant="15" id="14e-0D-RyD"/>
                         <constraint firstItem="gwF-JM-5nr" firstAttribute="top" secondItem="pau-Lb-TfN" secondAttribute="top" constant="84" id="4aN-UT-ere"/>
@@ -61,10 +82,18 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="Vzj-IT-dld" firstAttribute="leading" secondItem="gqs-4M-mUT" secondAttribute="leading" id="7nP-CU-BlX"/>
                 <constraint firstAttribute="bottom" secondItem="pau-Lb-TfN" secondAttribute="bottom" id="EDB-8g-Alq"/>
+                <constraint firstItem="scg-oh-rny" firstAttribute="leading" secondItem="gqs-4M-mUT" secondAttribute="leading" id="Ery-dd-M65"/>
+                <constraint firstAttribute="bottom" secondItem="Vzj-IT-dld" secondAttribute="bottom" id="KQn-3i-KXg"/>
+                <constraint firstAttribute="trailing" secondItem="scg-oh-rny" secondAttribute="trailing" id="Q02-Ai-Lwn"/>
+                <constraint firstAttribute="bottom" secondItem="scg-oh-rny" secondAttribute="bottom" id="V8N-NE-cWC"/>
+                <constraint firstItem="Vzj-IT-dld" firstAttribute="top" secondItem="gqs-4M-mUT" secondAttribute="top" id="a1L-Tn-PPE"/>
                 <constraint firstItem="pau-Lb-TfN" firstAttribute="leading" secondItem="gqs-4M-mUT" secondAttribute="leading" id="cXu-MR-K5X"/>
                 <constraint firstItem="pau-Lb-TfN" firstAttribute="top" secondItem="gqs-4M-mUT" secondAttribute="top" id="dR8-mC-EqW"/>
                 <constraint firstAttribute="trailing" secondItem="pau-Lb-TfN" secondAttribute="trailing" id="jR8-CQ-7Kp"/>
+                <constraint firstItem="scg-oh-rny" firstAttribute="top" secondItem="gqs-4M-mUT" secondAttribute="top" id="of2-VV-s9v"/>
+                <constraint firstAttribute="trailing" secondItem="Vzj-IT-dld" secondAttribute="trailing" id="yzd-dY-7RB"/>
             </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.borderRadius">
@@ -74,7 +103,17 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="mapView" destination="Htv-TJ-9PU" id="9Zx-5i-nk0"/>
+                <outlet property="tableView" destination="g5f-Sy-CoG" id="79T-sq-j8e"/>
             </connections>
         </view>
+        <visualEffectView opaque="NO" contentMode="scaleToFill" id="Uaf-bf-yH2">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SoX-H9-7S0">
+                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            </view>
+            <blurEffect style="light"/>
+        </visualEffectView>
     </objects>
 </document>

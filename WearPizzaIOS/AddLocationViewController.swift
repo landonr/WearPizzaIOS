@@ -9,12 +9,16 @@
 import UIKit
 import CoreLocation
 import MapKit
+let locationManger:CLLocationManager = CLLocationManager()
 
-class AddLocationView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
+class AddLocationView: UIView, CLLocationManagerDelegate, MKMapViewDelegate, UITableViewDelegate {
     @IBOutlet var mapView: MKMapView!
+    @IBOutlet var tableView: UITableView!
+    var localStores: [Store]
 
     override init(frame ourRect: CGRect)
     {
+        self.localStores = []
         super.init(frame: ourRect)
     }
     
@@ -23,27 +27,112 @@ class AddLocationView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
     }
     
     required init(coder aDecoder: NSCoder) {
+        self.localStores = []
         super.init(coder: aDecoder)
-    }
-    
-    func loadLocations() {
+        
         locationManger.delegate = self
         locationManger.desiredAccuracy = kCLLocationAccuracyBest
+        
         let authstate = CLLocationManager.authorizationStatus()
         if(authstate == CLAuthorizationStatus.NotDetermined){
             println("Not Authorised")
             locationManger.requestWhenInUseAuthorization()
         } else {
-            self.zoomToUser()
+            locationManger.startUpdatingLocation()
         }
     }
     
-    func zoomToUser() {
+    func loadLocations() {
+        tableView.estimatedRowHeight = 100.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
+}
+
+// MARK: TABLE VIEW STUFF
+extension AddLocationView {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.localStores.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var nib = UINib(nibName: "StoreCell", bundle: nil).instantiateWithOwner(self, options: nil)
+        var storeCell = nib[0] as! StoreCell
+        var store = self.localStores[indexPath.row]
+        storeCell.setStore(store)
+        return storeCell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var location = self.localStores[indexPath.row].coordinate
+        var mapPoint = MKMapPointForCoordinate(location)
+        var mapBox = MKMapRectMake(mapPoint.x, mapPoint.y, 10000, 10000)
+        self.mapView.setVisibleMapRect(mapBox, animated: true)
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100;
+    }
+}
+
+// MARK: LOCATION MANAGER STUFF
+extension AddLocationView {
+    func findCoordinates(stores: [Store], callback : ([Store])->Void) {
+        var counter = stores.count
+        var newStores = [Store]()
+        for store in stores {
+            var gc = CLGeocoder()
+            gc.geocodeAddressString(store.addressDescription, completionHandler: {
+                (location, error) -> Void in
+                var newLocation = (location[0] as! CLPlacemark).location.coordinate
+                let dropPin = MKPointAnnotation()
+                dropPin.coordinate = newLocation
+                dropPin.title = store.addressDescription
+                self.mapView.addAnnotation(dropPin)
+                
+                store.coordinate = newLocation
+                
+                newStores.append(store)
+                counter--
+                if counter == 0 {
+                    callback(newStores)
+                }
+            })
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!) {
+        let region = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 4000, 4000)
         
-        let userLocation = mapView.userLocation
+        mapView.setRegion(region, animated: true)
         
-        //let region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 2000, 2000)
+        locationManger.stopUpdatingLocation()
         
-        //mapView.setRegion(region, animated: true)
+        var gc = CLGeocoder()
+        gc.reverseGeocodeLocation(newLocation, completionHandler: { (address, error) -> Void in
+            let newAddress = address as? [CLPlacemark]
+            if(newAddress!.count > 0) {
+                var currentPlace: Address = Address()
+                currentPlace.initWithCLPlacemark(newAddress![0])
+                println(currentPlace.toRequest())
+                
+                pza.findStores(currentPlace.toRequest(), callback: {(stores : [Store])->Void in
+                    
+                    self.findCoordinates(stores, callback: { (stores) -> Void in
+                        self.localStores = stores
+                        self.tableView.reloadData()
+                        self.mapView.showAnnotations(self.mapView.annotations, animated: true)
+                    })
+                })
+            }
+        })
+    }
+}
+
+//MARK: STORE CELL
+class StoreCell: UITableViewCell {
+    @IBOutlet var addressLabel: UILabel!
+    
+    func setStore(store: Store) {
+        self.addressLabel.text = store.addressDescription
     }
 }
