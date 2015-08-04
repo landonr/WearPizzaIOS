@@ -47,6 +47,7 @@ class AddLocationView: UIView, CLLocationManagerDelegate, MKMapViewDelegate, UIT
     func loadLocations() {
         tableView.estimatedRowHeight = 100.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        self.findStores()
     }
 }
 
@@ -80,14 +81,8 @@ extension AddLocationView {
 extension AddLocationView {
     func fetchNewLocations() {
         self.fetchNewLocation = true
-        
-        let authstate = CLLocationManager.authorizationStatus()
-        if(authstate == CLAuthorizationStatus.NotDetermined){
-            println("Not Authorised")
-            locationManger.requestWhenInUseAuthorization()
-        } else {
-            locationManger.startUpdatingLocation()
-        }
+        locationManger.delegate = self
+        locationManger.startUpdatingLocation()
     }
     
     //reverse searches stores into gps coords
@@ -139,20 +134,15 @@ extension AddLocationView {
                             self.delegate.updateStores(stores)
                         })
                     })
-                } else {
-                    println(currentPlace.toRequest())
-                    
-                    pza.findStores(currentPlace.toRequest(), callback: {(stores : [Store])->Void in
-                        
-                        self.findCoordinates(stores, callback: { (stores) -> Void in
-                            self.localStores = stores
-                            self.tableView.reloadData()
-                            self.mapView.showAnnotations(self.mapView.annotations, animated: true)
-                        })
-                    })
                 }
             }
         })
+    }
+    
+    func findStores()
+    {
+        self.tableView.reloadData()
+        self.mapView.showAnnotations(self.mapView.annotations, animated: true)
     }
 }
 

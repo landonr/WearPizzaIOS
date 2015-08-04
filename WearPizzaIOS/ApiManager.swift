@@ -39,4 +39,26 @@ class ApiManager {
             callback(storeArray)
         })
     }
+    
+    func findMenu(storeID: String, callback : ([Store])->Void) {
+        var url = pza + "store/"
+        url += storeID as String
+        url += "/menu?lang=en&structured=true"
+        let request = api.createGetRequest(NSURL(string: url)!)
+        println(request)
+        //queryDictionary(url, queryDictionary: address)
+        
+        api.makeRequestDictionary(request, callback:  { (result : Dictionary<String, AnyObject>) -> Void in
+            var json = JSON(result)
+            var storeJson : JSON = json["Stores"]
+            var storeArray : [Store] = [Store]()
+            for (key: String, subJson: JSON) in storeJson {
+                var newStore : Store = Store()
+                newStore.initWithJSON(subJson)
+                storeArray.append(newStore)
+            }
+            
+            callback(storeArray)
+        })
+    }
 }

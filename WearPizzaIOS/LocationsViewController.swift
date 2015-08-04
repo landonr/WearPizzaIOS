@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class LocationsViewController: UIViewController, UIScrollViewDelegate {
+class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocationManagerDelegate {
     @IBOutlet var locationButton: UIBarButtonItem!
     @IBOutlet var navigationBar: UINavigationBar!
     @IBOutlet var addressScrollView: UIScrollView!
@@ -42,9 +42,23 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate {
         var locationNib = UINib(nibName: "AddLocationView", bundle: nil).instantiateWithOwner(self, options: nil)
         self.addLocationView = locationNib[0] as! AddLocationView
         self.addLocationView.delegate = self
-        self.addLocationView.fetchNewLocations()
+        
+        locationManger.delegate = self
+        let authstate = CLLocationManager.authorizationStatus()
+        if(authstate == CLAuthorizationStatus.NotDetermined){
+            println("Not Authorised")
+            locationManger.requestWhenInUseAuthorization()
+        }
     }
-
+    
+    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == CLAuthorizationStatus.AuthorizedWhenInUse {
+            self.addLocationView.fetchNewLocations()
+        } else {
+            
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -70,7 +84,8 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate {
             self.addLocationView.frame = CGRect(x: 0, y: -self.view.frame.height, width: self.view.frame.width, height: self.view.frame.height)
             self.view.addSubview(addLocationView)
             self.view.bringSubviewToFront(self.navigationBar)
-            addLocationView.layoutIfNeeded()
+            self.addLocationView.layoutIfNeeded()
+            self.addLocationView.findStores()
             UIView.animateWithDuration(0.75,
                 delay: NSTimeInterval(0),
                 usingSpringWithDamping: 0.8,
@@ -80,7 +95,6 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate {
                     self.addLocationView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
                 },
                 completion: {success in
-                    //self.addLocationView.loadLocations()
             })
         }
         //self.presentViewController(vc, animated: true, completion: nil)
