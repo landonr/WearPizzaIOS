@@ -36,6 +36,12 @@ class AddLocationView: UIView, CLLocationManagerDelegate, MKMapViewDelegate, UIT
         
         locationManger.delegate = self
         locationManger.desiredAccuracy = kCLLocationAccuracyBest
+        
+        if(localStores.count > 0)
+        {
+            self.tableView.reloadData()
+            self.mapView.showAnnotations(self.mapView.annotations, animated: true)
+        }
     }
     
     func loadLocations() {
