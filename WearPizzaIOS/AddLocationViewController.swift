@@ -15,10 +15,13 @@ class AddLocationView: UIView, CLLocationManagerDelegate, MKMapViewDelegate, UIT
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var tableView: UITableView!
     var localStores: [Store]
+    var delegate: LocationsViewController!
+    var fetchNewLocation: Bool
 
     override init(frame ourRect: CGRect)
     {
         self.localStores = []
+        self.fetchNewLocation = false
         super.init(frame: ourRect)
     }
     
@@ -28,18 +31,11 @@ class AddLocationView: UIView, CLLocationManagerDelegate, MKMapViewDelegate, UIT
     
     required init(coder aDecoder: NSCoder) {
         self.localStores = []
+        self.fetchNewLocation = false
         super.init(coder: aDecoder)
         
         locationManger.delegate = self
         locationManger.desiredAccuracy = kCLLocationAccuracyBest
-        
-        let authstate = CLLocationManager.authorizationStatus()
-        if(authstate == CLAuthorizationStatus.NotDetermined){
-            println("Not Authorised")
-            locationManger.requestWhenInUseAuthorization()
-        } else {
-            locationManger.startUpdatingLocation()
-        }
     }
     
     func loadLocations() {
@@ -76,6 +72,19 @@ extension AddLocationView {
 
 // MARK: LOCATION MANAGER STUFF
 extension AddLocationView {
+    func fetchNewLocations() {
+        self.fetchNewLocation = true
+        
+        let authstate = CLLocationManager.authorizationStatus()
+        if(authstate == CLAuthorizationStatus.NotDetermined){
+            println("Not Authorised")
+            locationManger.requestWhenInUseAuthorization()
+        } else {
+            locationManger.startUpdatingLocation()
+        }
+    }
+    
+    //reverse searches stores into gps coords
     func findCoordinates(stores: [Store], callback : ([Store])->Void) {
         var counter = stores.count
         var newStores = [Store]()
@@ -100,6 +109,7 @@ extension AddLocationView {
         }
     }
     
+    //called when gps gets new location
     func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!) {
         let region = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 4000, 4000)
         
@@ -113,16 +123,28 @@ extension AddLocationView {
             if(newAddress!.count > 0) {
                 var currentPlace: Address = Address()
                 currentPlace.initWithCLPlacemark(newAddress![0])
-                println(currentPlace.toRequest())
-                
-                pza.findStores(currentPlace.toRequest(), callback: {(stores : [Store])->Void in
-                    
-                    self.findCoordinates(stores, callback: { (stores) -> Void in
-                        self.localStores = stores
-                        self.tableView.reloadData()
-                        self.mapView.showAnnotations(self.mapView.annotations, animated: true)
+
+                if(self.fetchNewLocation) {
+                    self.fetchNewLocation = false
+                    self.delegate.updateAddress([currentPlace])
+                    pza.findStores(currentPlace.toRequest(), callback: {(stores : [Store])->Void in
+                        self.findCoordinates(stores, callback: { (stores) -> Void in
+                            self.localStores = stores
+                            self.delegate.updateStores(stores)
+                        })
                     })
-                })
+                } else {
+                    println(currentPlace.toRequest())
+                    
+                    pza.findStores(currentPlace.toRequest(), callback: {(stores : [Store])->Void in
+                        
+                        self.findCoordinates(stores, callback: { (stores) -> Void in
+                            self.localStores = stores
+                            self.tableView.reloadData()
+                            self.mapView.showAnnotations(self.mapView.annotations, animated: true)
+                        })
+                    })
+                }
             }
         })
     }

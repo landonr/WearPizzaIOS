@@ -14,10 +14,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gV-IU-dgC">
-                        <rect key="frame" x="8" y="16" width="302" height="83"/>
+                        <rect key="frame" x="8" y="8" width="302" height="99"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2150 Victoria Avenue East, Regina, SK S4N7B9" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="tjb-6A-9w9">
-                                <rect key="frame" x="8" y="8" width="286" height="67"/>
+                                <rect key="frame" x="8" y="8" width="286" height="83"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -40,12 +40,12 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                <color key="backgroundColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="5gV-IU-dgC" secondAttribute="bottom" constant="8" id="Dhj-iW-VS8"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="5gV-IU-dgC" secondAttribute="bottom" id="Dhj-iW-VS8"/>
                     <constraint firstAttribute="trailingMargin" secondItem="5gV-IU-dgC" secondAttribute="trailing" id="Jc7-Dh-TgK"/>
                     <constraint firstItem="5gV-IU-dgC" firstAttribute="leading" secondItem="K8O-uF-jEO" secondAttribute="leadingMargin" id="Pe4-Dc-Gux"/>
-                    <constraint firstItem="5gV-IU-dgC" firstAttribute="top" secondItem="K8O-uF-jEO" secondAttribute="topMargin" constant="8" id="e7W-0F-fEq"/>
+                    <constraint firstItem="5gV-IU-dgC" firstAttribute="top" secondItem="K8O-uF-jEO" secondAttribute="topMargin" id="e7W-0F-fEq"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

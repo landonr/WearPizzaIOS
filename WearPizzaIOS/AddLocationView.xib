@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -37,12 +37,14 @@
                                         <outlet property="delegate" destination="gqs-4M-mUT" id="NBT-Oa-6bV"/>
                                     </connections>
                                 </mapView>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="g5f-Sy-CoG">
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="g5f-Sy-CoG">
                                     <rect key="frame" x="0.0" y="300" width="570" height="201"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="400" id="ipp-yC-9Wf"/>
                                     </constraints>
+                                    <color key="separatorColor" red="0.2156862745" green="0.2156862745" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="sectionIndexBackgroundColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                     <variation key="default">
                                         <mask key="constraints">
                                             <exclude reference="ipp-yC-9Wf"/>
@@ -106,14 +108,5 @@
                 <outlet property="tableView" destination="g5f-Sy-CoG" id="79T-sq-j8e"/>
             </connections>
         </view>
-        <visualEffectView opaque="NO" contentMode="scaleToFill" id="Uaf-bf-yH2">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SoX-H9-7S0">
-                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            </view>
-            <blurEffect style="light"/>
-        </visualEffectView>
     </objects>
 </document>
