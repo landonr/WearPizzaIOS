@@ -14,12 +14,15 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
     @IBOutlet var navigationBar: UINavigationBar!
     @IBOutlet var addressScrollView: UIScrollView!
     @IBOutlet var addressScrollViewFrame: UIView!
+    @IBOutlet var newOrderView: UIView!
+    @IBOutlet var newOrderLabelVerticalOffset: NSLayoutConstraint!
     var addLocationView: AddLocationView!
     var locationViewShowing: Bool!
     var addressList: Array<Address>!
     var addressViewList: Array<AddressView>!
-    
+    var toppingList: Array<Topping>!
     var storeList: Array<Store>!
+    var orderViewController: OrderViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +46,8 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
         self.addLocationView = locationNib[0] as! AddLocationView
         self.addLocationView.delegate = self
         
+        self.view.bringSubviewToFront(self.navigationBar)
+
         locationManger.delegate = self
         let authstate = CLLocationManager.authorizationStatus()
         if(authstate == CLAuthorizationStatus.NotDetermined){
@@ -108,6 +113,21 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
     func updateStores(stores: Array<Store>) {
         self.storeList = stores
         self.navigationBar.topItem?.title = stores[0].addressDescription
+        pza.findMenu(String(stores[0].storeID), callback: { (toppings) -> Void in
+            self.toppingList = toppings
+            if(self.orderViewController != nil){
+                self.orderViewController.toppingList = self.toppingList
+                self.orderViewController.toppingTable.reloadData()
+            }
+            println("g2g")
+        })
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "NewOrder" {
+            self.orderViewController = segue.destinationViewController as! OrderViewController
+            self.orderViewController.toppingList = self.toppingList
+        }
     }
 }
 

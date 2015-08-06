@@ -18,13 +18,16 @@
 		8F1437291B674621005E1D8C /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1437271B674621005E1D8C /* ApiManager.swift */; };
 		8F3E80121B6E147100D4A773 /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3E80111B6E147100D4A773 /* StoreCell.xib */; };
 		8FA5DFDB1B5F2D390007D241 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA5DFDA1B5F2D390007D241 /* MapKit.framework */; };
-		8FA5DFDD1B61C2060007D241 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA5DFDC1B61C2060007D241 /* AddLocationViewController.swift */; };
+		8FA5DFDD1B61C2060007D241 /* AddLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA5DFDC1B61C2060007D241 /* AddLocationView.swift */; };
 		8FA5DFDF1B61C8790007D241 /* AddLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA5DFDE1B61C8790007D241 /* AddLocationView.xib */; };
 		8FA5DFE11B63EA780007D241 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA5DFE01B63EA780007D241 /* UIColorExtension.swift */; };
+		8FB229741B730C750063AC7E /* OrderCustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB229731B730C750063AC7E /* OrderCustomSegue.swift */; };
+		8FB229761B7312DC0063AC7E /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB229751B7312DC0063AC7E /* OrderViewController.swift */; };
 		8FB95D801B6EE3D700E356C5 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB95D7F1B6EE3D700E356C5 /* Address.swift */; };
 		8FB95D821B70630A00E356C5 /* AddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB95D811B70630A00E356C5 /* AddressView.xib */; };
 		8FB95D841B7067C100E356C5 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB95D831B7067C100E356C5 /* AddressView.swift */; };
 		8FB95D861B70751D00E356C5 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB95D851B70751D00E356C5 /* LocationsViewController.swift */; };
+		8FB95D881B7187AC00E356C5 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB95D871B7187AC00E356C5 /* Pizza.swift */; };
 		CB0B7CB127D3FBA071949D9F /* Pods_WearPizzaIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501367CF39049CE66828BB7 /* Pods_WearPizzaIOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -57,13 +60,16 @@
 		8F1437271B674621005E1D8C /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		8F3E80111B6E147100D4A773 /* StoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreCell.xib; sourceTree = "<group>"; };
 		8FA5DFDA1B5F2D390007D241 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		8FA5DFDC1B61C2060007D241 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		8FA5DFDC1B61C2060007D241 /* AddLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationView.swift; sourceTree = "<group>"; };
 		8FA5DFDE1B61C8790007D241 /* AddLocationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLocationView.xib; sourceTree = "<group>"; };
 		8FA5DFE01B63EA780007D241 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		8FB229731B730C750063AC7E /* OrderCustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCustomSegue.swift; sourceTree = "<group>"; };
+		8FB229751B7312DC0063AC7E /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		8FB95D7F1B6EE3D700E356C5 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		8FB95D811B70630A00E356C5 /* AddressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressView.xib; sourceTree = "<group>"; };
 		8FB95D831B7067C100E356C5 /* AddressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		8FB95D851B70751D00E356C5 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		8FB95D871B7187AC00E356C5 /* Pizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +131,10 @@
 				718F42551B572957000E0AA2 /* AppDelegate.swift */,
 				718F42591B572957000E0AA2 /* SecondViewController.swift */,
 				8FB95D831B7067C100E356C5 /* AddressView.swift */,
+				8FB229731B730C750063AC7E /* OrderCustomSegue.swift */,
+				8FA5DFDC1B61C2060007D241 /* AddLocationView.swift */,
 				8FB95D851B70751D00E356C5 /* LocationsViewController.swift */,
-				8FA5DFDC1B61C2060007D241 /* AddLocationViewController.swift */,
+				8FB229751B7312DC0063AC7E /* OrderViewController.swift */,
 				8FA5DFDE1B61C8790007D241 /* AddLocationView.xib */,
 				8FB95D811B70630A00E356C5 /* AddressView.xib */,
 				8F3E80111B6E147100D4A773 /* StoreCell.xib */,
@@ -167,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				71A2FA371B69D67F0095D047 /* Store.swift */,
+				8FB95D871B7187AC00E356C5 /* Pizza.swift */,
 				8FB95D7F1B6EE3D700E356C5 /* Address.swift */,
 			);
 			path = Models;
@@ -338,13 +347,16 @@
 			files = (
 				8FB95D801B6EE3D700E356C5 /* Address.swift in Sources */,
 				8FB95D861B70751D00E356C5 /* LocationsViewController.swift in Sources */,
+				8FB229761B7312DC0063AC7E /* OrderViewController.swift in Sources */,
 				718F425A1B572957000E0AA2 /* SecondViewController.swift in Sources */,
 				718F42561B572957000E0AA2 /* AppDelegate.swift in Sources */,
 				8FA5DFE11B63EA780007D241 /* UIColorExtension.swift in Sources */,
 				71A2FA381B69D67F0095D047 /* Store.swift in Sources */,
 				8F1437291B674621005E1D8C /* ApiManager.swift in Sources */,
 				8F1437281B674621005E1D8C /* HTTP.swift in Sources */,
-				8FA5DFDD1B61C2060007D241 /* AddLocationViewController.swift in Sources */,
+				8FA5DFDD1B61C2060007D241 /* AddLocationView.swift in Sources */,
+				8FB229741B730C750063AC7E /* OrderCustomSegue.swift in Sources */,
+				8FB95D881B7187AC00E356C5 /* Pizza.swift in Sources */,
 				8FB95D841B7067C100E356C5 /* AddressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

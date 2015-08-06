@@ -40,7 +40,7 @@ class ApiManager {
         })
     }
     
-    func findMenu(storeID: String, callback : ([Store])->Void) {
+    func findMenu(storeID: String, callback : ([Topping])->Void) {
         var url = pza + "store/"
         url += storeID as String
         url += "/menu?lang=en&structured=true"
@@ -50,11 +50,13 @@ class ApiManager {
         
         api.makeRequestDictionary(request, callback:  { (result : Dictionary<String, AnyObject>) -> Void in
             var json = JSON(result)
-            var storeJson : JSON = json["Stores"]
-            var storeArray : [Store] = [Store]()
+            var storeJson : JSON = json["Toppings"]["Pizza"]
+            var storeArray : [Topping] = [Topping]()
             for (key: String, subJson: JSON) in storeJson {
-                var newStore : Store = Store()
+                var newStore : Topping = Topping()
                 newStore.initWithJSON(subJson)
+                newStore.toDictionary(1, index:1)
+
                 storeArray.append(newStore)
             }
             
