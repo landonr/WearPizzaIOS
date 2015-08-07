@@ -37,7 +37,7 @@ class AddLocationView: UIView, CLLocationManagerDelegate, MKMapViewDelegate, UIT
         locationManger.delegate = self
         locationManger.desiredAccuracy = kCLLocationAccuracyBest
         
-        if(localStores.count > 0)
+        if(self.localStores.count > 0)
         {
             self.tableView.reloadData()
             self.mapView.showAnnotations(self.mapView.annotations, animated: true)
@@ -79,8 +79,14 @@ extension AddLocationView {
 
 // MARK: LOCATION MANAGER STUFF
 extension AddLocationView {
-    func fetchNewLocations() {
+    @IBAction func refreshLocations() {
         self.fetchNewLocation = true
+        self.fetchNewLocations()
+    }
+    func fetchNewLocations() {
+        if(self.delegate.storeList == nil) {
+            self.fetchNewLocation = true
+        }
         locationManger.delegate = self
         locationManger.startUpdatingLocation()
     }
@@ -118,16 +124,22 @@ extension AddLocationView {
         
         locationManger.stopUpdatingLocation()
         
+        //reverse searches geocode to rough address
         var gc = CLGeocoder()
         gc.reverseGeocodeLocation(newLocation, completionHandler: { (address, error) -> Void in
             let newAddress = address as? [CLPlacemark]
             if(newAddress!.count > 0) {
                 var currentPlace: Address = Address()
                 currentPlace.initWithCLPlacemark(newAddress![0])
-
+                
+                //checks for local stores
                 if(self.fetchNewLocation) {
                     self.fetchNewLocation = false
                     self.delegate.updateAddress([currentPlace])
+                    let userDefaults = NSUserDefaults.standardUserDefaults()
+                    userDefaults.setValue(currentPlace.toDictionary(), forKey: "address")
+                    userDefaults.synchronize()
+                    
                     pza.findStores(currentPlace.toRequest(), callback: {(stores : [Store])->Void in
                         self.findCoordinates(stores, callback: { (stores) -> Void in
                             self.localStores = stores

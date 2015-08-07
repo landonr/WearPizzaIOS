@@ -35,7 +35,9 @@ class ApiManager {
                 newStore.initWithJSON(subJson)
                 storeArray.append(newStore)
             }
-            
+            let userDefaults = NSUserDefaults.standardUserDefaults()
+            userDefaults.setValue(Store().arrayToGeneric(storeArray), forKey: "storeArray")
+            userDefaults.synchronize()
             callback(storeArray)
         })
     }
@@ -50,17 +52,19 @@ class ApiManager {
         
         api.makeRequestDictionary(request, callback:  { (result : Dictionary<String, AnyObject>) -> Void in
             var json = JSON(result)
-            var storeJson : JSON = json["Toppings"]["Pizza"]
-            var storeArray : [Topping] = [Topping]()
-            for (key: String, subJson: JSON) in storeJson {
-                var newStore : Topping = Topping()
-                newStore.initWithJSON(subJson)
-                newStore.toDictionary(1, index:1)
+            var toppingJson : JSON = json["Toppings"]["Pizza"]
+            var toppingArray : [Topping] = [Topping]()
+            for (key: String, subJson: JSON) in toppingJson {
+                var newTopping : Topping = Topping()
+                newTopping.initWithJSON(subJson)
+                newTopping.toDictionary(1, index:1)
 
-                storeArray.append(newStore)
+                toppingArray.append(newTopping)
             }
-            
-            callback(storeArray)
+            let userDefaults = NSUserDefaults.standardUserDefaults()
+            userDefaults.setValue(Topping().arrayToGeneric(toppingArray), forKey: "toppingArray")
+            userDefaults.synchronize()
+            callback(toppingArray)
         })
     }
 }

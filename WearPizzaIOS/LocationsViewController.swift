@@ -26,6 +26,21 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if let storeArray: AnyObject = userDefaults.valueForKey("storeArray") {
+            var s = storeArray as! Array<Dictionary<String, String>>
+            var stores = Store().genericToArray(s)
+            self.updateStores(stores)
+        }
+        
+        locationManger.delegate = self
+        let authstate = CLLocationManager.authorizationStatus()
+        if(authstate == CLAuthorizationStatus.NotDetermined){
+            locationManger.requestWhenInUseAuthorization()
+        }
+        
         self.locationViewShowing = false
         self.addressViewList = []
         
@@ -40,20 +55,23 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
         
         self.addressScrollView.addSubview(addressView)
         self.addressViewList.append(addressView)
+        if let address: AnyObject = userDefaults.valueForKey("address") {
+            var a = address as! Dictionary<String, String>
+            var newAddress = Address().genericToDictionary(a)
+            self.updateAddress([newAddress])
+        }
         self.addressScrollViewFrame.layoutIfNeeded()
         
         var locationNib = UINib(nibName: "AddLocationView", bundle: nil).instantiateWithOwner(self, options: nil)
         self.addLocationView = locationNib[0] as! AddLocationView
         self.addLocationView.delegate = self
-        
-        self.view.bringSubviewToFront(self.navigationBar)
-
-        locationManger.delegate = self
-        let authstate = CLLocationManager.authorizationStatus()
-        if(authstate == CLAuthorizationStatus.NotDetermined){
-            println("Not Authorised")
-            locationManger.requestWhenInUseAuthorization()
+        if(self.storeList != nil) {
+            self.addLocationView.localStores = self.storeList
+            self.addLocationView.tableView.reloadData()
         }
+        self.addLocationView.fetchNewLocations()
+
+        self.view.bringSubviewToFront(self.navigationBar)
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
@@ -105,6 +123,10 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
         //self.presentViewController(vc, animated: true, completion: nil)
     }
     
+    @IBAction func newOrderButtonPressed(sender: AnyObject) {
+        self.navigationController
+    }
+    
     func updateAddress(addresses: Array<Address>) {
         self.addressList = addresses;
         self.addressViewList[0].updateWithAddress(addresses[0])
@@ -113,6 +135,8 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
     func updateStores(stores: Array<Store>) {
         self.storeList = stores
         self.navigationBar.topItem?.title = stores[0].addressDescription
+        
+        /*
         pza.findMenu(String(stores[0].storeID), callback: { (toppings) -> Void in
             self.toppingList = toppings
             if(self.orderViewController != nil){
@@ -121,13 +145,16 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
             }
             println("g2g")
         })
+        */
     }
     
+    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "NewOrder" {
             self.orderViewController = segue.destinationViewController as! OrderViewController
             self.orderViewController.toppingList = self.toppingList
         }
     }
+*/
 }
 

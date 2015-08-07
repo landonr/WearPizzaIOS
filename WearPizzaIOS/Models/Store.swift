@@ -20,4 +20,36 @@ public class Store: NSObject {
         addressDescription = jsonData["AddressDescription"].stringValue
         storeID = jsonData["StoreID"].intValue
     }
+    
+    public func toDictionary() -> Dictionary<String, String>
+    {
+        var newDictionary:NSDictionary = [
+            "addressDescription":         addressDescription,
+            "storeID":   String(storeID)]
+        return newDictionary as! Dictionary<String, String>
+    }
+    
+    public func arrayToGeneric(storeArray: Array<Store>) -> Array<Dictionary<String, String>>
+    {
+        var newArray:Array<Dictionary<String, String>> = []
+        for store in storeArray {
+            var newDictionary:Dictionary = store.toDictionary()
+            newArray.append(newDictionary)
+        }
+        
+        return newArray
+    }
+    
+    public func genericToArray(storeArray: Array<Dictionary<String, String>>) -> Array<Store>
+    {
+        var newArray: Array<Store> = []
+        for store in storeArray {
+            var newStore = Store()
+            newStore.addressDescription = store["addressDescription"]!
+            newStore.storeID = store["storeID"]!.toInt()!
+            newArray.append(newStore)
+        }
+        
+        return newArray
+    }
 }

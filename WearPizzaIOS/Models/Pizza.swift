@@ -32,6 +32,17 @@ public class Topping: NSObject {
         var new = [code: [ratio: size]]
         return new
     }
+    
+    public func arrayToGeneric(toppingArray: Array<Topping>) -> Array<Dictionary<String, Dictionary<String, String>>>
+    {
+        var newArray:Array<Dictionary<String, Dictionary<String, String>>> = []
+        for topping in toppingArray {
+            var newDictionary:Dictionary = topping.toDictionary(1, index:1)
+            newArray.append(newDictionary)
+        }
+        
+        return newArray
+    }
 }
 
 public class Pizza: NSObject {

@@ -46,6 +46,17 @@ public class Address: NSObject {
         return newDictionary as! Dictionary<String, String>
     }
     
+    public func genericToDictionary(addressDictionary:Dictionary<String, String>) -> Address
+    {
+        var newAddress = Address()
+        newAddress.city = addressDictionary["city"]!
+        newAddress.postalCode = addressDictionary["postalCode"]!
+        newAddress.address = addressDictionary["address"]!
+        newAddress.province = addressDictionary["province"]!
+        newAddress.type = addressDictionary["type"]!
+        return newAddress
+    }
+    
     public func toRequest() -> String
     {
         var newRequest = ""
