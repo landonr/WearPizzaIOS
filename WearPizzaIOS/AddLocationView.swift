@@ -144,6 +144,10 @@ extension AddLocationView {
                         self.findCoordinates(stores, callback: { (stores) -> Void in
                             self.localStores = stores
                             self.delegate.updateStores(stores)
+                            if(self.delegate.toppingList == nil)
+                            {
+                                self.delegate.getMenu(stores[0])
+                            }
                         })
                     })
                 }

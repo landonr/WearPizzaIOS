@@ -26,19 +26,40 @@ public class Topping: NSObject {
         }
     }
     
-    public func toDictionary(count: Int, index: Int) -> Dictionary<String, Dictionary<String, String>>
+    public func toRequestDictionary(count: Int, index: Int) -> Dictionary<String, Dictionary<String, String>>
     {
         var ratio = String(index) + "/" + String(count)
         var new = [code: [ratio: size]]
         return new
     }
     
-    public func arrayToGeneric(toppingArray: Array<Topping>) -> Array<Dictionary<String, Dictionary<String, String>>>
+    public func toDictionary() -> Dictionary<String, String>
     {
-        var newArray:Array<Dictionary<String, Dictionary<String, String>>> = []
+        var newDictionary:Dictionary<String, String> = [
+            "code":      code,
+            "name":      name];
+        return newDictionary
+    }
+    
+    public func arrayToGeneric(toppingArray: Array<Topping>) -> Array<Dictionary<String, String>>
+    {
+        var newArray:Array<Dictionary<String, String>> = []
         for topping in toppingArray {
-            var newDictionary:Dictionary = topping.toDictionary(1, index:1)
+            var newDictionary:Dictionary = topping.toDictionary()
             newArray.append(newDictionary)
+        }
+        
+        return newArray
+    }
+    
+    public func genericToArray(toppingArray: Array<Dictionary<String, String>>) -> Array<Topping>
+    {
+        var newArray: Array<Topping> = []
+        for topping in toppingArray {
+            var newTopping = Topping()
+            newTopping.code = topping["code"]!
+            newTopping.name = topping["name"]!
+            newArray.append(newTopping)
         }
         
         return newArray

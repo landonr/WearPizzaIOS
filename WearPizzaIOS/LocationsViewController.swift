@@ -35,6 +35,12 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
             self.updateStores(stores)
         }
         
+        if let toppingArray: AnyObject = userDefaults.valueForKey("toppingArray") {
+            var t = toppingArray as! Array<Dictionary<String, String>>
+            var toppings = Topping().genericToArray(t)
+            self.toppingList = toppings
+        }
+        
         locationManger.delegate = self
         let authstate = CLLocationManager.authorizationStatus()
         if(authstate == CLAuthorizationStatus.NotDetermined){
@@ -124,7 +130,7 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
     }
     
     @IBAction func newOrderButtonPressed(sender: AnyObject) {
-        self.navigationController
+
     }
     
     func updateAddress(addresses: Array<Address>) {
@@ -135,9 +141,11 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
     func updateStores(stores: Array<Store>) {
         self.storeList = stores
         self.navigationBar.topItem?.title = stores[0].addressDescription
-        
-        /*
-        pza.findMenu(String(stores[0].storeID), callback: { (toppings) -> Void in
+    }
+    
+    func getMenu(store: Store)
+    {
+        pza.findMenu(String(store.storeID), callback: { (toppings) -> Void in
             self.toppingList = toppings
             if(self.orderViewController != nil){
                 self.orderViewController.toppingList = self.toppingList
@@ -145,16 +153,13 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
             }
             println("g2g")
         })
-        */
     }
     
-    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "NewOrder" {
             self.orderViewController = segue.destinationViewController as! OrderViewController
             self.orderViewController.toppingList = self.toppingList
         }
     }
-*/
 }
 

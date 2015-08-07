@@ -57,7 +57,7 @@ class ApiManager {
             for (key: String, subJson: JSON) in toppingJson {
                 var newTopping : Topping = Topping()
                 newTopping.initWithJSON(subJson)
-                newTopping.toDictionary(1, index:1)
+                newTopping.toRequestDictionary(1, index:1)
 
                 toppingArray.append(newTopping)
             }
