@@ -41,6 +41,15 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>&#169; 2014 Pebble Technology Corp. All rights reserved.
+</string>
+			<key>Title</key>
+			<string>PebbleKit</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>The MIT License (MIT)
 
 Copyright (c) 2014 Ruoyu Fu

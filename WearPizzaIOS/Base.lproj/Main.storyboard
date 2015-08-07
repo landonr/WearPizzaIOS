@@ -123,6 +123,12 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Locations" id="8QZ-s5-Njv">
+                                        <barButtonItem key="leftBarButtonItem" title="Sync To Pebble" style="plain" id="Hgv-Th-px3">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="syncToPebbleButtonPressed:" destination="9pv-A4-QxB" id="U86-Ti-q5U"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="locationsButton" style="plain" id="uRf-Bl-daf">
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <connections>

@@ -7,85 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06472B9BBDA222C25AABD7E83DD210AB /* DragAndDropTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 385DD6983A630D7953F9A3D8B13B7C87 /* DragAndDropTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02757FA25E548834A702F5614177963E /* DragAndDropTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58125B0176DA6BD99FC76B1F736A708 /* DragAndDropTableView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0C52E918B9BEB3BC1ACDF789D78FEEBE /* UIView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 2938A57B3BE569E069359342A0E0116C /* UIView+Snapshot.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2001FF864D912B0F2253CB584ED73C04 /* DragAndDropTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E5BDA8B8E5E78E816C82C4C37268B4 /* DragAndDropTableView-dummy.m */; };
 		23F5940A08DB5F0B129F9DFF7CCC3452 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E62DA073C367ACFC8C77B0B6180FD1 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3769B9433B301E32A9DC200E73038AF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */; };
 		39A8A7DB3537BDC61EF618B1737C1EB5 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F861572AEF58AF8E8738463397C601 /* SwiftyJSON.swift */; };
-		442D4C0A048BE6C69FCE100C46AA69AC /* UIView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F1CFBD9701F58C6049515BB962E59 /* UIView+Snapshot.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		45E1CB1241CADF968F1D742F41A3E104 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */; };
 		524B55AA7490F42A93F2A0F747268F42 /* Pods-WearPizzaIOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 901B220F23DD3B25B70497FAF9FFF8D4 /* Pods-WearPizzaIOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5534D86F52E58E746F6DBBC0BE1CDB82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */; };
-		5A99AB48675391803C43F31718BF0B1C /* DragAndDropTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C582B0CCC5AA8FD89DCF175AB89E18BA /* DragAndDropTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		79BA48D72EA22DB0C849D246AFBF4346 /* DragAndDropTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C5B316BD213D3DD80A37D70B10703C /* DragAndDropTableView-dummy.m */; };
-		8B169AD7E7F8C26CC5904085F5801772 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568AC18A3C3CD44173E5009A674064CA /* QuartzCore.framework */; };
+		647A4CAB65CF4E680B4FAAB98B2EA42B /* DragAndDropTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C9C9749E0A9FFAF62841F46AFF13F05 /* DragAndDropTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85BCF540792D67B398F9F4D96A1FF563 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E260892DCF819D6C0970AD2AA160B23C /* QuartzCore.framework */; };
 		90EF20BB8DC0A183A97CEE5D4BE375EE /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D3575B7F9DE11C652ED4F55D4D976B /* SwiftyJSON-dummy.m */; };
-		A36DC88290B291CEE9DDEDA940C0EDD8 /* UIView+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 23A4C23FFCCEDB8F151BFCAADDFFF317 /* UIView+Snapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B88C8C4DB544EAA7A0A4A2B94E5ABBF0 /* DragAndDropTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AD8061B71A84BA2B9AA921637D8FC8 /* DragAndDropTableView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C9E44A2D32D43E4C8BEB5B8CA11481D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */; };
+		B674CE4246625E806DF32AEF188FA9B7 /* UIView+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EE5583ABFDDBCF392FB25421F3D610 /* UIView+Snapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7EF723D251AACAB3C49AB489DF424D2 /* DragAndDropTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 519BE9A82D8DFFB2D19BE4C9607C7D23 /* DragAndDropTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8A794C7B36A2A42EFC40FBD5BE8C3B8 /* Pods-WearPizzaIOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4DD9AC85A2758834DDA0A99337D5EC /* Pods-WearPizzaIOS-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8130618CDA8DCECC03DA0CC3976D3B6E /* PBXContainerItemProxy */ = {
+		29F4BA085AAD21C969731C64E0ECEAAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABEBA82A4E79E5F24CC89C3E1E9AAC80;
+			remoteInfo = DragAndDropTableView;
+		};
+		901EDF4EE482B3880415CE295907FC4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B9A04D3C9B208813656510FDA8ADAE02;
 			remoteInfo = SwiftyJSON;
 		};
-		FA5691482C70ECB110DB894AF00E9ED7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 784B311B1A9F516C7A28D65104149478;
-			remoteInfo = DragAndDropTableView;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03D91AFEF7A0FBE5FAE9764B4F39C5BC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1816145413B552E0BFEC107A7B673793 /* DragAndDropTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DragAndDropTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E93D57B89C73094A559A3A7C7180D8F /* DragAndDropTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DragAndDropTableView.modulemap; sourceTree = "<group>"; };
-		1E9D0839DE7DCB476867E091CDC975A8 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		23A4C23FFCCEDB8F151BFCAADDFFF317 /* UIView+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Snapshot.h"; path = "DragAndDropTableView/UIView+Snapshot.h"; sourceTree = "<group>"; };
-		29B2A852E27A2BF94C4E16AFCC29D4B4 /* DragAndDropTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DragAndDropTableView.xcconfig; sourceTree = "<group>"; };
+		1511DF0070623B269CCCA629175D7085 /* DragAndDropTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DragAndDropTableView-prefix.pch"; sourceTree = "<group>"; };
+		21C5E62E87D94E2A8BDC866F510DDFFC /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		2938A57B3BE569E069359342A0E0116C /* UIView+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Snapshot.m"; path = "DragAndDropTableView/UIView+Snapshot.m"; sourceTree = "<group>"; };
 		2F9D9F541A894A456C67AF00076C8853 /* Pods-WearPizzaIOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WearPizzaIOS.modulemap"; sourceTree = "<group>"; };
+		30F288D7CEEEB57BF353ED6913EF41B8 /* DragAndDropTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DragAndDropTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31F861572AEF58AF8E8738463397C601 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		369BE663D06125F8D8892B60144702D8 /* DragAndDropTableView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "DragAndDropTableView-Private.xcconfig"; sourceTree = "<group>"; };
-		37520285AA5FF6B417E7CB4A7CC7DB54 /* DragAndDropTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DragAndDropTableView-prefix.pch"; sourceTree = "<group>"; };
-		385DD6983A630D7953F9A3D8B13B7C87 /* DragAndDropTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DragAndDropTableView.h; path = DragAndDropTableView/DragAndDropTableView.h; sourceTree = "<group>"; };
+		375B7441FC23E6959A1E0ACAB7993DD1 /* DragAndDropTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DragAndDropTableView.modulemap; sourceTree = "<group>"; };
 		482688B580CA1A8C20897731E2E7F2AD /* Pods-WearPizzaIOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WearPizzaIOS-resources.sh"; sourceTree = "<group>"; };
-		4A3268AE88E12DF8A0C77D44077E6DF3 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		519BE9A82D8DFFB2D19BE4C9607C7D23 /* DragAndDropTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DragAndDropTableView-umbrella.h"; sourceTree = "<group>"; };
 		550BD0C66E5067D189531E2E0F055125 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		568AC18A3C3CD44173E5009A674064CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		6332E7E81D7DB82158C59B7011FC1CDB /* PebbleVendor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PebbleVendor.framework; sourceTree = "<group>"; };
 		68D1DD22F1155DB50399496AC3824FB9 /* Pods_WearPizzaIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WearPizzaIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74154E98681989281161A7B2BDF14B03 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AD3BFB816E5191863913275AAA5BBA5 /* Pods-WearPizzaIOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WearPizzaIOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		806BCE8F79962C7FBFA45D11358EA1B3 /* Pods-WearPizzaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WearPizzaIOS.release.xcconfig"; sourceTree = "<group>"; };
+		800DBA5843CCB939369B694151F8BB0D /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		80F4575809FCDA60D129BF75574829F9 /* Pods-WearPizzaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WearPizzaIOS.release.xcconfig"; sourceTree = "<group>"; };
 		85E62DA073C367ACFC8C77B0B6180FD1 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		8601DFBB9D379E1BFA52F0F22E9A2AF9 /* Pods-WearPizzaIOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WearPizzaIOS-frameworks.sh"; sourceTree = "<group>"; };
 		901B220F23DD3B25B70497FAF9FFF8D4 /* Pods-WearPizzaIOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WearPizzaIOS-umbrella.h"; sourceTree = "<group>"; };
-		92C5B316BD213D3DD80A37D70B10703C /* DragAndDropTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DragAndDropTableView-dummy.m"; sourceTree = "<group>"; };
+		93EE5583ABFDDBCF392FB25421F3D610 /* UIView+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Snapshot.h"; path = "DragAndDropTableView/UIView+Snapshot.h"; sourceTree = "<group>"; };
+		996975D749BD7BEB25CC78D54D490AE8 /* DragAndDropTableView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "DragAndDropTableView-Private.xcconfig"; sourceTree = "<group>"; };
+		9C9C9749E0A9FFAF62841F46AFF13F05 /* DragAndDropTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DragAndDropTableView.h; path = DragAndDropTableView/DragAndDropTableView.h; sourceTree = "<group>"; };
 		A0D3575B7F9DE11C652ED4F55D4D976B /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		AE6431D8D7EFA238E472F7F31141257C /* SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
+		B3857C40CE75F33E9F2A1979DB6851E5 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C36F1CFBD9701F58C6049515BB962E59 /* UIView+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Snapshot.m"; path = "DragAndDropTableView/UIView+Snapshot.m"; sourceTree = "<group>"; };
-		C582B0CCC5AA8FD89DCF175AB89E18BA /* DragAndDropTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DragAndDropTableView-umbrella.h"; sourceTree = "<group>"; };
-		CCE482E070D6A6BB3F8963999D1C8B67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDFD6BDED1543DF5F7EBD546120C5980 /* SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
+		C58125B0176DA6BD99FC76B1F736A708 /* DragAndDropTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DragAndDropTableView.m; path = DragAndDropTableView/DragAndDropTableView.m; sourceTree = "<group>"; };
+		D0FDCDDE3232ABE0FD5372D15CEE2FDB /* PebbleKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PebbleKit.framework; sourceTree = "<group>"; };
+		D9CE860E91AE9C58587FD926052784AE /* Pods-WearPizzaIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WearPizzaIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E260892DCF819D6C0970AD2AA160B23C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		E2E5BDA8B8E5E78E816C82C4C37268B4 /* DragAndDropTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DragAndDropTableView-dummy.m"; sourceTree = "<group>"; };
 		E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E70A6E317C0ABBC27E595B0486786FB7 /* Pods-WearPizzaIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WearPizzaIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E7199BDE40728BD1BA5D1C73AE7D408D /* DragAndDropTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DragAndDropTableView.xcconfig; sourceTree = "<group>"; };
 		EB4CB50B42FA0112BD3CB968CB68AC93 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE4DD9AC85A2758834DDA0A99337D5EC /* Pods-WearPizzaIOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WearPizzaIOS-dummy.m"; sourceTree = "<group>"; };
 		EF29AF7FD4C0695A3D806137088BC1F7 /* Pods-WearPizzaIOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WearPizzaIOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F4AD8061B71A84BA2B9AA921637D8FC8 /* DragAndDropTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DragAndDropTableView.m; path = DragAndDropTableView/DragAndDropTableView.m; sourceTree = "<group>"; };
-		FB8E1497CB36731948A8E5EA89BBE725 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		FB8E358989F7AAC3F2FFF7CEDE3755A7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7E2A7369AE0A419470667C47013C14CD /* Frameworks */ = {
+		8B5D70E89B2D1911E6125A6CDECADA66 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9E44A2D32D43E4C8BEB5B8CA11481D9 /* Foundation.framework in Frameworks */,
-				8B169AD7E7F8C26CC5904085F5801772 /* QuartzCore.framework in Frameworks */,
+				45E1CB1241CADF968F1D742F41A3E104 /* Foundation.framework in Frameworks */,
+				85BCF540792D67B398F9F4D96A1FF563 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,24 +114,33 @@
 			isa = PBXGroup;
 			children = (
 				E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */,
-				568AC18A3C3CD44173E5009A674064CA /* QuartzCore.framework */,
+				E260892DCF819D6C0970AD2AA160B23C /* QuartzCore.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		23E53DCC47092EC6CE06BE9A894EF358 /* Support Files */ = {
+		25A8C93264D60C4EB7F0673CE8E4575D /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				CCE482E070D6A6BB3F8963999D1C8B67 /* Info.plist */,
-				4A3268AE88E12DF8A0C77D44077E6DF3 /* SwiftyJSON.modulemap */,
-				FB8E1497CB36731948A8E5EA89BBE725 /* SwiftyJSON.xcconfig */,
-				AE6431D8D7EFA238E472F7F31141257C /* SwiftyJSON-Private.xcconfig */,
-				A0D3575B7F9DE11C652ED4F55D4D976B /* SwiftyJSON-dummy.m */,
-				1E9D0839DE7DCB476867E091CDC975A8 /* SwiftyJSON-prefix.pch */,
-				85E62DA073C367ACFC8C77B0B6180FD1 /* SwiftyJSON-umbrella.h */,
+				31F861572AEF58AF8E8738463397C601 /* SwiftyJSON.swift */,
+				73DCFAF5F17122731F354FA4B0C4CAA3 /* Support Files */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		2882D4D4CFF31EF93DE73B5916F60110 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				375B7441FC23E6959A1E0ACAB7993DD1 /* DragAndDropTableView.modulemap */,
+				E7199BDE40728BD1BA5D1C73AE7D408D /* DragAndDropTableView.xcconfig */,
+				996975D749BD7BEB25CC78D54D490AE8 /* DragAndDropTableView-Private.xcconfig */,
+				E2E5BDA8B8E5E78E816C82C4C37268B4 /* DragAndDropTableView-dummy.m */,
+				1511DF0070623B269CCCA629175D7085 /* DragAndDropTableView-prefix.pch */,
+				519BE9A82D8DFFB2D19BE4C9607C7D23 /* DragAndDropTableView-umbrella.h */,
+				FB8E358989F7AAC3F2FFF7CEDE3755A7 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwiftyJSON";
+			path = "../Target Support Files/DragAndDropTableView";
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -140,28 +151,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		50547657C4D3047096BDD221EA9A7168 /* Support Files */ = {
+		6B5BFA127EC55C5E46103FD6004ECBEF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1E93D57B89C73094A559A3A7C7180D8F /* DragAndDropTableView.modulemap */,
-				29B2A852E27A2BF94C4E16AFCC29D4B4 /* DragAndDropTableView.xcconfig */,
-				369BE663D06125F8D8892B60144702D8 /* DragAndDropTableView-Private.xcconfig */,
-				92C5B316BD213D3DD80A37D70B10703C /* DragAndDropTableView-dummy.m */,
-				37520285AA5FF6B417E7CB4A7CC7DB54 /* DragAndDropTableView-prefix.pch */,
-				C582B0CCC5AA8FD89DCF175AB89E18BA /* DragAndDropTableView-umbrella.h */,
-				03D91AFEF7A0FBE5FAE9764B4F39C5BC /* Info.plist */,
+				D0FDCDDE3232ABE0FD5372D15CEE2FDB /* PebbleKit.framework */,
+				6332E7E81D7DB82158C59B7011FC1CDB /* PebbleVendor.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/DragAndDropTableView";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5EA340FDFBCD0381C0F8ADF8AACE0CF8 /* Pods */ = {
+		73DCFAF5F17122731F354FA4B0C4CAA3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A787F6DAE82350F7020C2C451FD12180 /* DragAndDropTableView */,
-				79B064717B691AAC9A685292036D63B5 /* SwiftyJSON */,
+				74154E98681989281161A7B2BDF14B03 /* Info.plist */,
+				B3857C40CE75F33E9F2A1979DB6851E5 /* SwiftyJSON.modulemap */,
+				21C5E62E87D94E2A8BDC866F510DDFFC /* SwiftyJSON.xcconfig */,
+				BDFD6BDED1543DF5F7EBD546120C5980 /* SwiftyJSON-Private.xcconfig */,
+				A0D3575B7F9DE11C652ED4F55D4D976B /* SwiftyJSON-dummy.m */,
+				800DBA5843CCB939369B694151F8BB0D /* SwiftyJSON-prefix.pch */,
+				85E62DA073C367ACFC8C77B0B6180FD1 /* SwiftyJSON-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
 			sourceTree = "<group>";
 		};
 		73E7B715126A90A75910909F0CDF65AD /* Pods-WearPizzaIOS */ = {
@@ -175,20 +186,11 @@
 				8601DFBB9D379E1BFA52F0F22E9A2AF9 /* Pods-WearPizzaIOS-frameworks.sh */,
 				482688B580CA1A8C20897731E2E7F2AD /* Pods-WearPizzaIOS-resources.sh */,
 				901B220F23DD3B25B70497FAF9FFF8D4 /* Pods-WearPizzaIOS-umbrella.h */,
-				E70A6E317C0ABBC27E595B0486786FB7 /* Pods-WearPizzaIOS.debug.xcconfig */,
-				806BCE8F79962C7FBFA45D11358EA1B3 /* Pods-WearPizzaIOS.release.xcconfig */,
+				D9CE860E91AE9C58587FD926052784AE /* Pods-WearPizzaIOS.debug.xcconfig */,
+				80F4575809FCDA60D129BF75574829F9 /* Pods-WearPizzaIOS.release.xcconfig */,
 			);
 			name = "Pods-WearPizzaIOS";
 			path = "Target Support Files/Pods-WearPizzaIOS";
-			sourceTree = "<group>";
-		};
-		79B064717B691AAC9A685292036D63B5 /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				31F861572AEF58AF8E8738463397C601 /* SwiftyJSON.swift */,
-				23E53DCC47092EC6CE06BE9A894EF358 /* Support Files */,
-			);
-			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -196,7 +198,7 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				5EA340FDFBCD0381C0F8ADF8AACE0CF8 /* Pods */,
+				8A957996B34382BCB4FFA7FE8A0D2DC3 /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				870BEA57EAEF7EBC8FAD5D7962E8E7C1 /* Targets Support Files */,
 			);
@@ -210,14 +212,24 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A787F6DAE82350F7020C2C451FD12180 /* DragAndDropTableView */ = {
+		8A957996B34382BCB4FFA7FE8A0D2DC3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				385DD6983A630D7953F9A3D8B13B7C87 /* DragAndDropTableView.h */,
-				F4AD8061B71A84BA2B9AA921637D8FC8 /* DragAndDropTableView.m */,
-				23A4C23FFCCEDB8F151BFCAADDFFF317 /* UIView+Snapshot.h */,
-				C36F1CFBD9701F58C6049515BB962E59 /* UIView+Snapshot.m */,
-				50547657C4D3047096BDD221EA9A7168 /* Support Files */,
+				BD0192BA44080C7DE70F1BABCBC20402 /* DragAndDropTableView */,
+				F5AB3C0D1B18A1309EA22F91929E236E /* PebbleKit */,
+				25A8C93264D60C4EB7F0673CE8E4575D /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BD0192BA44080C7DE70F1BABCBC20402 /* DragAndDropTableView */ = {
+			isa = PBXGroup;
+			children = (
+				9C9C9749E0A9FFAF62841F46AFF13F05 /* DragAndDropTableView.h */,
+				C58125B0176DA6BD99FC76B1F736A708 /* DragAndDropTableView.m */,
+				93EE5583ABFDDBCF392FB25421F3D610 /* UIView+Snapshot.h */,
+				2938A57B3BE569E069359342A0E0116C /* UIView+Snapshot.m */,
+				2882D4D4CFF31EF93DE73B5916F60110 /* Support Files */,
 			);
 			path = DragAndDropTableView;
 			sourceTree = "<group>";
@@ -225,31 +237,39 @@
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1816145413B552E0BFEC107A7B673793 /* DragAndDropTableView.framework */,
+				30F288D7CEEEB57BF353ED6913EF41B8 /* DragAndDropTableView.framework */,
 				68D1DD22F1155DB50399496AC3824FB9 /* Pods_WearPizzaIOS.framework */,
 				EB4CB50B42FA0112BD3CB968CB68AC93 /* SwiftyJSON.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F5AB3C0D1B18A1309EA22F91929E236E /* PebbleKit */ = {
+			isa = PBXGroup;
+			children = (
+				6B5BFA127EC55C5E46103FD6004ECBEF /* Frameworks */,
+			);
+			path = PebbleKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		394F4CB38E7A64AE1ECD78C31F55AB66 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5A99AB48675391803C43F31718BF0B1C /* DragAndDropTableView-umbrella.h in Headers */,
-				06472B9BBDA222C25AABD7E83DD210AB /* DragAndDropTableView.h in Headers */,
-				A36DC88290B291CEE9DDEDA940C0EDD8 /* UIView+Snapshot.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6A95C4659EBBF20D68C5D4D4375DF3F7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				524B55AA7490F42A93F2A0F747268F42 /* Pods-WearPizzaIOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B6A6C846CC4B88AFA948E84A8EA4A2D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7EF723D251AACAB3C49AB489DF424D2 /* DragAndDropTableView-umbrella.h in Headers */,
+				647A4CAB65CF4E680B4FAAB98B2EA42B /* DragAndDropTableView.h in Headers */,
+				B674CE4246625E806DF32AEF188FA9B7 /* UIView+Snapshot.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,21 +295,21 @@
 			buildRules = (
 			);
 			dependencies = (
-				E5CBDDF4C63CF36F1A5289C10190DBB9 /* PBXTargetDependency */,
-				4EA5365A8BF01AC19E3C641E94248054 /* PBXTargetDependency */,
+				51491F93966351D06F4E2DE99C441576 /* PBXTargetDependency */,
+				754A006D7930FF559C95640CA16DEFB1 /* PBXTargetDependency */,
 			);
 			name = "Pods-WearPizzaIOS";
 			productName = "Pods-WearPizzaIOS";
 			productReference = 68D1DD22F1155DB50399496AC3824FB9 /* Pods_WearPizzaIOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		784B311B1A9F516C7A28D65104149478 /* DragAndDropTableView */ = {
+		ABEBA82A4E79E5F24CC89C3E1E9AAC80 /* DragAndDropTableView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E87DDCB20E2A7BD2D6A466FF99B985BB /* Build configuration list for PBXNativeTarget "DragAndDropTableView" */;
+			buildConfigurationList = 5041563F33F08DEBE48322A75E80F775 /* Build configuration list for PBXNativeTarget "DragAndDropTableView" */;
 			buildPhases = (
-				C4A768478B6FA313667D9B295B35CAAA /* Sources */,
-				7E2A7369AE0A419470667C47013C14CD /* Frameworks */,
-				394F4CB38E7A64AE1ECD78C31F55AB66 /* Headers */,
+				E23059893FD915DA295E41B5B3BDEF49 /* Sources */,
+				8B5D70E89B2D1911E6125A6CDECADA66 /* Frameworks */,
+				7B6A6C846CC4B88AFA948E84A8EA4A2D /* Headers */,
 			);
 			buildRules = (
 			);
@@ -297,7 +317,7 @@
 			);
 			name = DragAndDropTableView;
 			productName = DragAndDropTableView;
-			productReference = 1816145413B552E0BFEC107A7B673793 /* DragAndDropTableView.framework */;
+			productReference = 30F288D7CEEEB57BF353ED6913EF41B8 /* DragAndDropTableView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B9A04D3C9B208813656510FDA8ADAE02 /* SwiftyJSON */ = {
@@ -338,7 +358,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				784B311B1A9F516C7A28D65104149478 /* DragAndDropTableView */,
+				ABEBA82A4E79E5F24CC89C3E1E9AAC80 /* DragAndDropTableView */,
 				7161871490311684E7EBBB5E4872EEE2 /* Pods-WearPizzaIOS */,
 				B9A04D3C9B208813656510FDA8ADAE02 /* SwiftyJSON */,
 			);
@@ -363,71 +383,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C4A768478B6FA313667D9B295B35CAAA /* Sources */ = {
+		E23059893FD915DA295E41B5B3BDEF49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79BA48D72EA22DB0C849D246AFBF4346 /* DragAndDropTableView-dummy.m in Sources */,
-				B88C8C4DB544EAA7A0A4A2B94E5ABBF0 /* DragAndDropTableView.m in Sources */,
-				442D4C0A048BE6C69FCE100C46AA69AC /* UIView+Snapshot.m in Sources */,
+				2001FF864D912B0F2253CB584ED73C04 /* DragAndDropTableView-dummy.m in Sources */,
+				02757FA25E548834A702F5614177963E /* DragAndDropTableView.m in Sources */,
+				0C52E918B9BEB3BC1ACDF789D78FEEBE /* UIView+Snapshot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4EA5365A8BF01AC19E3C641E94248054 /* PBXTargetDependency */ = {
+		51491F93966351D06F4E2DE99C441576 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DragAndDropTableView;
+			target = ABEBA82A4E79E5F24CC89C3E1E9AAC80 /* DragAndDropTableView */;
+			targetProxy = 29F4BA085AAD21C969731C64E0ECEAAB /* PBXContainerItemProxy */;
+		};
+		754A006D7930FF559C95640CA16DEFB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyJSON;
 			target = B9A04D3C9B208813656510FDA8ADAE02 /* SwiftyJSON */;
-			targetProxy = 8130618CDA8DCECC03DA0CC3976D3B6E /* PBXContainerItemProxy */;
-		};
-		E5CBDDF4C63CF36F1A5289C10190DBB9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DragAndDropTableView;
-			target = 784B311B1A9F516C7A28D65104149478 /* DragAndDropTableView */;
-			targetProxy = FA5691482C70ECB110DB894AF00E9ED7 /* PBXContainerItemProxy */;
+			targetProxy = 901EDF4EE482B3880415CE295907FC4B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		511103F7F15A7E8F83B268EA03462CAB /* Release */ = {
+		0AB3D2B6735F6018D69CE46F7217D873 /* Release */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		56F93DCB816E10D45BB6DE82FE67E3AC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 369BE663D06125F8D8892B60144702D8 /* DragAndDropTableView-Private.xcconfig */;
+			baseConfigurationReference = 996975D749BD7BEB25CC78D54D490AE8 /* DragAndDropTableView-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0.1.10;
@@ -452,9 +438,93 @@
 			};
 			name = Release;
 		};
-		6C2B3079137EA9A131F2A0DC808F814D /* Debug */ = {
+		0B467278A8D4094DE833171E10E6E12F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE6431D8D7EFA238E472F7F31141257C /* SwiftyJSON-Private.xcconfig */;
+			baseConfigurationReference = BDFD6BDED1543DF5F7EBD546120C5980 /* SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2.2.1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 2;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		26738D42727DF128A2A99BC4EBE9A82C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 996975D749BD7BEB25CC78D54D490AE8 /* DragAndDropTableView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.10;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.10;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DragAndDropTableView/DragAndDropTableView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DragAndDropTableView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DragAndDropTableView/DragAndDropTableView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DragAndDropTableView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		29D1B1F7BED2779B88949473B8127F9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9CE860E91AE9C58587FD926052784AE /* Pods-WearPizzaIOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-WearPizzaIOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-WearPizzaIOS/Pods-WearPizzaIOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_WearPizzaIOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		72B31FB4A22E6D58FB51B2774BB71419 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDFD6BDED1543DF5F7EBD546120C5980 /* SwiftyJSON-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 2.2.1;
@@ -480,7 +550,36 @@
 			};
 			name = Debug;
 		};
-		AA05AF9C3A14EE0E32F42C6E6D42D34F /* Debug */ = {
+		A6A2406B47866C233714256EEE1D6007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80F4575809FCDA60D129BF75574829F9 /* Pods-WearPizzaIOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-WearPizzaIOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-WearPizzaIOS/Pods-WearPizzaIOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_WearPizzaIOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -519,116 +618,37 @@
 			};
 			name = Debug;
 		};
-		D4A3FD61BAE7705EB426B91DB82C2BF4 /* Debug */ = {
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 369BE663D06125F8D8892B60144702D8 /* DragAndDropTableView-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.1.10;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.1.10;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DragAndDropTableView/DragAndDropTableView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DragAndDropTableView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DragAndDropTableView/DragAndDropTableView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = DragAndDropTableView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D6876775F143468777D185D964D587EA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE6431D8D7EFA238E472F7F31141257C /* SwiftyJSON-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2.2.1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 2;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		EB68BC518C6DE24100FAE9AF861C217D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E70A6E317C0ABBC27E595B0486786FB7 /* Pods-WearPizzaIOS.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-WearPizzaIOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-WearPizzaIOS/Pods-WearPizzaIOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_WearPizzaIOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FC92DCA376EF8E5334F69F1B9451A697 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 806BCE8F79962C7FBFA45D11358EA1B3 /* Pods-WearPizzaIOS.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-WearPizzaIOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-WearPizzaIOS/Pods-WearPizzaIOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_WearPizzaIOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -638,8 +658,17 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA05AF9C3A14EE0E32F42C6E6D42D34F /* Debug */,
-				511103F7F15A7E8F83B268EA03462CAB /* Release */,
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5041563F33F08DEBE48322A75E80F775 /* Build configuration list for PBXNativeTarget "DragAndDropTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26738D42727DF128A2A99BC4EBE9A82C /* Debug */,
+				0AB3D2B6735F6018D69CE46F7217D873 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -647,8 +676,8 @@
 		6AF45366202C75BFCB13738AB00EC1DF /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6C2B3079137EA9A131F2A0DC808F814D /* Debug */,
-				D6876775F143468777D185D964D587EA /* Release */,
+				72B31FB4A22E6D58FB51B2774BB71419 /* Debug */,
+				0B467278A8D4094DE833171E10E6E12F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -656,17 +685,8 @@
 		761BBFC48105CD915BAD627D112967C6 /* Build configuration list for PBXNativeTarget "Pods-WearPizzaIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB68BC518C6DE24100FAE9AF861C217D /* Debug */,
-				FC92DCA376EF8E5334F69F1B9451A697 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E87DDCB20E2A7BD2D6A466FF99B985BB /* Build configuration list for PBXNativeTarget "DragAndDropTableView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4A3FD61BAE7705EB426B91DB82C2BF4 /* Debug */,
-				56F93DCB816E10D45BB6DE82FE67E3AC /* Release */,
+				29D1B1F7BED2779B88949473B8127F9E /* Debug */,
+				A6A2406B47866C233714256EEE1D6007 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

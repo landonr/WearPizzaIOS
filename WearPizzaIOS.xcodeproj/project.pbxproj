@@ -14,6 +14,8 @@
 		718F42621B572957000E0AA2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 718F42601B572957000E0AA2 /* LaunchScreen.xib */; };
 		718F426E1B572957000E0AA2 /* WearPizzaIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718F426D1B572957000E0AA2 /* WearPizzaIOSTests.swift */; };
 		71A2FA381B69D67F0095D047 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2FA371B69D67F0095D047 /* Store.swift */; };
+		71FD42541B743DC000D2F79E /* PebbleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD42531B743DC000D2F79E /* PebbleController.swift */; };
+		71FD42571B744FE800D2F79E /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FD42561B744FE800D2F79E /* ExternalAccessory.framework */; };
 		8F1437281B674621005E1D8C /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1437261B674621005E1D8C /* HTTP.swift */; };
 		8F1437291B674621005E1D8C /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1437271B674621005E1D8C /* ApiManager.swift */; };
 		8F3E80121B6E147100D4A773 /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3E80111B6E147100D4A773 /* StoreCell.xib */; };
@@ -57,6 +59,9 @@
 		718F426C1B572957000E0AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		718F426D1B572957000E0AA2 /* WearPizzaIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WearPizzaIOSTests.swift; sourceTree = "<group>"; };
 		71A2FA371B69D67F0095D047 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		71FD42531B743DC000D2F79E /* PebbleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PebbleController.swift; sourceTree = "<group>"; };
+		71FD42551B74412400D2F79E /* WearPizzaIOS-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WearPizzaIOS-Bridging.h"; sourceTree = "<group>"; };
+		71FD42561B744FE800D2F79E /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		8F1437261B674621005E1D8C /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		8F1437271B674621005E1D8C /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		8F3E80111B6E147100D4A773 /* StoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreCell.xib; sourceTree = "<group>"; };
@@ -79,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71FD42571B744FE800D2F79E /* ExternalAccessory.framework in Frameworks */,
 				8FA5DFDB1B5F2D390007D241 /* MapKit.framework in Frameworks */,
 				CB0B7CB127D3FBA071949D9F /* Pods_WearPizzaIOS.framework in Frameworks */,
 			);
@@ -97,6 +103,7 @@
 		6E4EC2A0AFFCC941DEB6A6D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71FD42561B744FE800D2F79E /* ExternalAccessory.framework */,
 				5501367CF39049CE66828BB7 /* Pods_WearPizzaIOS.framework */,
 			);
 			name = Frameworks;
@@ -105,6 +112,7 @@
 		718F42471B572957000E0AA2 = {
 			isa = PBXGroup;
 			children = (
+				71FD42551B74412400D2F79E /* WearPizzaIOS-Bridging.h */,
 				8FA5DFDA1B5F2D390007D241 /* MapKit.framework */,
 				718F42521B572957000E0AA2 /* WearPizzaIOS */,
 				718F426A1B572957000E0AA2 /* WearPizzaIOSTests */,
@@ -138,6 +146,7 @@
 				8FA5DFDC1B61C2060007D241 /* AddLocationView.swift */,
 				8FB95D851B70751D00E356C5 /* LocationsViewController.swift */,
 				8FB229751B7312DC0063AC7E /* OrderViewController.swift */,
+				71FD42531B743DC000D2F79E /* PebbleController.swift */,
 				8FA5DFDE1B61C8790007D241 /* AddLocationView.xib */,
 				8FB95D811B70630A00E356C5 /* AddressView.xib */,
 				8F3E80111B6E147100D4A773 /* StoreCell.xib */,
@@ -245,7 +254,7 @@
 				TargetAttributes = {
 					718F424F1B572957000E0AA2 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 5EK8B36623;
+						DevelopmentTeam = 4384X88AAP;
 					};
 					718F42661B572957000E0AA2 = {
 						CreatedOnToolsVersion = 6.4;
@@ -356,6 +365,7 @@
 				8FA5DFE11B63EA780007D241 /* UIColorExtension.swift in Sources */,
 				8FB229781B7427250063AC7E /* DismisOrderCustomSegue.swift in Sources */,
 				71A2FA381B69D67F0095D047 /* Store.swift in Sources */,
+				71FD42541B743DC000D2F79E /* PebbleController.swift in Sources */,
 				8F1437291B674621005E1D8C /* ApiManager.swift in Sources */,
 				8F1437281B674621005E1D8C /* HTTP.swift in Sources */,
 				8FA5DFDD1B61C2060007D241 /* AddLocationView.swift in Sources */,
@@ -492,10 +502,34 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WearPizzaIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"z\"",
+					"-framework",
+					"\"DragAndDropTableView\"",
+					"-framework",
+					"\"PebbleKit\"",
+					"-framework",
+					"\"PebbleVendor\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-weak_framework",
+					"\"CoreBluetooth\"",
+					"-weak_framework",
+					"\"CoreMotion\"",
+					"-weak_framework",
+					"\"ExternalAccessory\"",
+					"-weak_framework",
+					"\"MessageUI\"",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WearPizzaIOS-Bridging.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -506,10 +540,34 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WearPizzaIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"z\"",
+					"-framework",
+					"\"DragAndDropTableView\"",
+					"-framework",
+					"\"PebbleKit\"",
+					"-framework",
+					"\"PebbleVendor\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-weak_framework",
+					"\"CoreBluetooth\"",
+					"-weak_framework",
+					"\"CoreMotion\"",
+					"-weak_framework",
+					"\"ExternalAccessory\"",
+					"-weak_framework",
+					"\"MessageUI\"",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WearPizzaIOS-Bridging.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

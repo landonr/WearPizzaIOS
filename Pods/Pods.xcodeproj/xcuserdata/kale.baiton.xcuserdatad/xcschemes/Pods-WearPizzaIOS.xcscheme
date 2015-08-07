@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7436C6AB94E362DFD9EDA9F6"
+               BlueprintIdentifier = "8E7841CBBF54CD3123679D1D"
                BuildableName = "Pods_WearPizzaIOS.framework"
                BlueprintName = "Pods-WearPizzaIOS"
                ReferencedContainer = "container:Pods.xcodeproj">

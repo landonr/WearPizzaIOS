@@ -23,6 +23,7 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
     var toppingList: Array<Topping>!
     var storeList: Array<Store>!
     var orderViewController: OrderViewController!
+    var pebbleController : PebbleController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -131,6 +132,11 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
     
     @IBAction func newOrderButtonPressed(sender: AnyObject) {
 
+    }
+    
+    @IBAction func syncToPebbleButtonPressed(sender: AnyObject) {
+        self.pebbleController = PebbleController();
+        self.pebbleController.syncDataToPebble();
     }
     
     func updateAddress(addresses: Array<Address>) {

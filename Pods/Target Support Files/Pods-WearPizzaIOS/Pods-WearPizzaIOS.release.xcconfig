@@ -1,7 +1,9 @@
+FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/PebbleKit" "$(PODS_ROOT)/PebbleKit"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/PebbleKit" "${PODS_ROOT}/Headers/Public/PebbleKit/PebbleKit" "${PODS_ROOT}/Headers/Public/PebbleKit/PebbleVendor"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/DragAndDropTableView.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SwiftyJSON.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "DragAndDropTableView" -framework "SwiftyJSON"
+OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/DragAndDropTableView.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SwiftyJSON.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/PebbleKit" -isystem "${PODS_ROOT}/Headers/Public/PebbleKit/PebbleKit" -isystem "${PODS_ROOT}/Headers/Public/PebbleKit/PebbleVendor"
+OTHER_LDFLAGS = $(inherited) -l"z" -framework "DragAndDropTableView" -framework "PebbleKit" -framework "PebbleVendor" -framework "SwiftyJSON" -weak_framework "CoreBluetooth" -weak_framework "CoreMotion" -weak_framework "ExternalAccessory" -weak_framework "MessageUI"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-WearPizzaIOS
 PODS_ROOT = ${SRCROOT}/Pods

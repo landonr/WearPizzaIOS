@@ -24,6 +24,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+## PebbleKit
+
+© 2014 Pebble Technology Corp. All rights reserved.
+
+
 ## SwiftyJSON
 
 The MIT License (MIT)
