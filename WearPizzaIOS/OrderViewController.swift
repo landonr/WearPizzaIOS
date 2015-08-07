@@ -16,9 +16,25 @@ class OrderViewController: UIViewController, UITableViewDelegate {
     @IBOutlet var sizeSelector: UISegmentedControl!
     var toppingList: Array<Topping>!
     var pizzas: Array<Pizza>!
+    var address: Address!
+    var store: Store!
+    
     override func viewDidLoad() {
         self.toppingTable.reloadData()
         self.pizzas = []
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PriceCheck" {
+            var order = Order().initWithAddressAndPizzaAndStore(self.address, pizzas: pizzas, store:self.store)
+            var asData = NSJSONSerialization.dataWithJSONObject(order, options:NSJSONWritingOptions(0), error: nil)
+            var jsonString = NSString(data: asData!, encoding: NSUTF8StringEncoding)
+            var fixedString = jsonString!.stringByReplacingOccurrencesOfString("\\", withString: "")
+            println(fixedString)
+            println(order)
+            //self.orderViewController = segue.destinationViewController as! OrderViewController
+            //self.orderViewController.toppingList = self.toppingList
+        }
     }
 }
 

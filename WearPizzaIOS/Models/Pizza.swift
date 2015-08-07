@@ -29,7 +29,7 @@ public class Topping: NSObject {
     public func toRequestDictionary(count: Int, index: Int) -> Dictionary<String, Dictionary<String, String>>
     {
         var ratio = String(index) + "/" + String(count)
-        var new = [code: [ratio: size]]
+        var new = [code: [ratio: "1"]]
         return new
     }
     

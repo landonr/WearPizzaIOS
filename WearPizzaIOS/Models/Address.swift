@@ -16,6 +16,10 @@ public class Address: NSObject {
     public var address : String = ""
     public var province : String = ""
     public var type : String = "Delivery"
+    public var firstName: String = ""
+    public var lastName: String = ""
+    public var email: String = ""
+    public var phone: String = ""
     
     public func initWithJSON(jsonData : JSON) -> Void
     {
@@ -42,7 +46,22 @@ public class Address: NSObject {
             "postalCode":   postalCode,
             "address":      address,
             "province":     province,
-            "type":         type]
+            "type":         type,
+            "firstName":    firstName,
+            "lastName":     lastName,
+            "email":        email,
+            "phone":        phone]
+        return newDictionary as! Dictionary<String, String>
+    }
+    
+    public func toRequestDictionary() -> Dictionary<String, String>
+    {
+        var newDictionary:NSDictionary = [
+            "City":         city,
+            "PostalCode":   postalCode.stringByReplacingOccurrencesOfString(" ", withString: ""),
+            "Street":      address,
+            "Region":     "SASKATCHEWAN",
+            "type":         "HOUSE"]
         return newDictionary as! Dictionary<String, String>
     }
     
@@ -54,6 +73,10 @@ public class Address: NSObject {
         newAddress.address = addressDictionary["address"]!
         newAddress.province = addressDictionary["province"]!
         newAddress.type = addressDictionary["type"]!
+        newAddress.firstName = addressDictionary["firstName"]!
+        newAddress.lastName = addressDictionary["lastName"]!
+        newAddress.email = addressDictionary["email"]!
+        newAddress.phone = addressDictionary["phone"]!
         return newAddress
     }
     

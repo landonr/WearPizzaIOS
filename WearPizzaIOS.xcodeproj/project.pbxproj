@@ -26,6 +26,7 @@
 		8FB229741B730C750063AC7E /* OrderCustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB229731B730C750063AC7E /* OrderCustomSegue.swift */; };
 		8FB229761B7312DC0063AC7E /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB229751B7312DC0063AC7E /* OrderViewController.swift */; };
 		8FB229781B7427250063AC7E /* DismisOrderCustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB229771B7427250063AC7E /* DismisOrderCustomSegue.swift */; };
+		8FB2297A1B7460570063AC7E /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB229791B7460570063AC7E /* Order.swift */; };
 		8FB95D801B6EE3D700E356C5 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB95D7F1B6EE3D700E356C5 /* Address.swift */; };
 		8FB95D821B70630A00E356C5 /* AddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB95D811B70630A00E356C5 /* AddressView.xib */; };
 		8FB95D841B7067C100E356C5 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB95D831B7067C100E356C5 /* AddressView.swift */; };
@@ -72,6 +73,7 @@
 		8FB229731B730C750063AC7E /* OrderCustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCustomSegue.swift; sourceTree = "<group>"; };
 		8FB229751B7312DC0063AC7E /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		8FB229771B7427250063AC7E /* DismisOrderCustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismisOrderCustomSegue.swift; sourceTree = "<group>"; };
+		8FB229791B7460570063AC7E /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		8FB95D7F1B6EE3D700E356C5 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		8FB95D811B70630A00E356C5 /* AddressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressView.xib; sourceTree = "<group>"; };
 		8FB95D831B7067C100E356C5 /* AddressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				71A2FA371B69D67F0095D047 /* Store.swift */,
 				8FB95D871B7187AC00E356C5 /* Pizza.swift */,
 				8FB95D7F1B6EE3D700E356C5 /* Address.swift */,
+				8FB229791B7460570063AC7E /* Order.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			files = (
 				8FB95D801B6EE3D700E356C5 /* Address.swift in Sources */,
 				8FB95D861B70751D00E356C5 /* LocationsViewController.swift in Sources */,
+				8FB2297A1B7460570063AC7E /* Order.swift in Sources */,
 				8FB229761B7312DC0063AC7E /* OrderViewController.swift in Sources */,
 				718F425A1B572957000E0AA2 /* SecondViewController.swift in Sources */,
 				718F42561B572957000E0AA2 /* AppDelegate.swift in Sources */,

@@ -165,6 +165,8 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
         if segue.identifier == "NewOrder" {
             self.orderViewController = segue.destinationViewController as! OrderViewController
             self.orderViewController.toppingList = self.toppingList
+            self.orderViewController.address = self.addressList[0]
+            self.orderViewController.store = self.storeList[0]
         }
     }
 }
