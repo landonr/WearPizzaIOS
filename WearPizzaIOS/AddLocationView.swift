@@ -88,7 +88,7 @@ extension AddLocationView {
             self.fetchNewLocation = true
         }
         locationManger.delegate = self
-        locationManger.startUpdatingLocation()
+        //locationManger.startUpdatingLocation()
     }
     
     //reverse searches stores into gps coords
@@ -116,6 +116,20 @@ extension AddLocationView {
         }
     }
     
+    func loadStoresWithAddress(currentPlace: Address)
+    {
+        pza.findStores(currentPlace.toRequest(), callback: {(stores : [Store])->Void in
+            self.findCoordinates(stores, callback: { (stores) -> Void in
+                self.localStores = stores
+                self.delegate.updateStores(stores)
+                if(self.delegate.toppingList == nil)
+                {
+                    self.delegate.getMenu(stores[0])
+                }
+            })
+        })
+    }
+    
     //called when gps gets new location
     func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!) {
         let region = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 4000, 4000)
@@ -135,21 +149,7 @@ extension AddLocationView {
                 //checks for local stores
                 if(self.fetchNewLocation) {
                     self.fetchNewLocation = false
-                    self.delegate.updateAddress([currentPlace])
-                    let userDefaults = NSUserDefaults.standardUserDefaults()
-                    userDefaults.setValue(currentPlace.toDictionary(), forKey: "address")
-                    userDefaults.synchronize()
-                    
-                    pza.findStores(currentPlace.toRequest(), callback: {(stores : [Store])->Void in
-                        self.findCoordinates(stores, callback: { (stores) -> Void in
-                            self.localStores = stores
-                            self.delegate.updateStores(stores)
-                            if(self.delegate.toppingList == nil)
-                            {
-                                self.delegate.getMenu(stores[0])
-                            }
-                        })
-                    })
+                    self.loadStoresWithAddress(currentPlace)
                 }
             }
         })

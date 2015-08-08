@@ -104,9 +104,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="addressField" destination="ME4-Rm-Sfg" id="aZc-4Q-hpv"/>
-                <outlet property="otherField" destination="GDW-Jb-xsB" id="iDP-eQ-n3N"/>
-                <outlet property="paymentField" destination="c5e-6X-wP1" id="Yat-cg-Mte"/>
-                <outlet property="phoneField" destination="LKw-IA-ee4" id="QFe-7Q-bve"/>
+                <outlet property="cityField" destination="LKw-IA-ee4" id="Z8X-07-0BV"/>
+                <outlet property="phoneField" destination="GDW-Jb-xsB" id="Fed-Dg-ThK"/>
+                <outlet property="postalField" destination="c5e-6X-wP1" id="FpV-Ed-582"/>
             </connections>
             <point key="canvasLocation" x="489" y="47"/>
         </view>

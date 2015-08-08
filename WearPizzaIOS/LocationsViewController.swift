@@ -75,6 +75,8 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
         if(self.storeList != nil) {
             self.addLocationView.localStores = self.storeList
             self.addLocationView.tableView.reloadData()
+        } else {
+            self.addLocationView.loadStoresWithAddress(self.addressList[0])
         }
         self.addLocationView.fetchNewLocations()
 

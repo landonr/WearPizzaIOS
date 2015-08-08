@@ -12,8 +12,8 @@ import CoreLocation
 class AddressView: UIView {
     @IBOutlet var addressField: UITextField!
     @IBOutlet var phoneField: UITextField!
-    @IBOutlet var paymentField: UITextField!
-    @IBOutlet var otherField: UITextField!
+    @IBOutlet var cityField: UITextField!
+    @IBOutlet var postalField: UITextField!
 
     override init(frame ourRect: CGRect) {
         super.init(frame: ourRect)
@@ -23,9 +23,9 @@ class AddressView: UIView {
             attributes:[NSForegroundColorAttributeName: UIColor(red: 255, green: 255, blue: 255, alpha: 0.2)])
         phoneField.attributedPlaceholder = NSAttributedString(string:"Phone",
             attributes:[NSForegroundColorAttributeName: UIColor(red: 255, green: 255, blue: 255, alpha: 0.2)])
-        paymentField.attributedPlaceholder = NSAttributedString(string:"Payment",
+        cityField.attributedPlaceholder = NSAttributedString(string:"City",
             attributes:[NSForegroundColorAttributeName: UIColor(red: 255, green: 255, blue: 255, alpha: 0.2)])
-        otherField.attributedPlaceholder = NSAttributedString(string:"Other",
+        postalField.attributedPlaceholder = NSAttributedString(string:"Postal Code",
             attributes:[NSForegroundColorAttributeName: UIColor(red: 255, green: 255, blue: 255, alpha: 0.2)])
     }
     
@@ -35,8 +35,8 @@ class AddressView: UIView {
     
     func updateWithAddress(address: Address) {
         addressField.text = address.address
-        phoneField.text = address.province
-        paymentField.text = address.postalCode
-        otherField.text = address.city
+        cityField.text = address.city
+        postalField.text = address.postalCode
+        phoneField.text = address.phone
     }
 }

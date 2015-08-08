@@ -23,6 +23,7 @@
 		8FA5DFDD1B61C2060007D241 /* AddLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA5DFDC1B61C2060007D241 /* AddLocationView.swift */; };
 		8FA5DFDF1B61C8790007D241 /* AddLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA5DFDE1B61C8790007D241 /* AddLocationView.xib */; };
 		8FA5DFE11B63EA780007D241 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA5DFE01B63EA780007D241 /* UIColorExtension.swift */; };
+		8FA9C17A1B7691D20024A953 /* LoadAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA9C1791B7691D20024A953 /* LoadAddressViewController.swift */; };
 		8FB229741B730C750063AC7E /* OrderCustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB229731B730C750063AC7E /* OrderCustomSegue.swift */; };
 		8FB229761B7312DC0063AC7E /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB229751B7312DC0063AC7E /* OrderViewController.swift */; };
 		8FB229781B7427250063AC7E /* DismisOrderCustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB229771B7427250063AC7E /* DismisOrderCustomSegue.swift */; };
@@ -70,6 +71,7 @@
 		8FA5DFDC1B61C2060007D241 /* AddLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationView.swift; sourceTree = "<group>"; };
 		8FA5DFDE1B61C8790007D241 /* AddLocationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLocationView.xib; sourceTree = "<group>"; };
 		8FA5DFE01B63EA780007D241 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		8FA9C1791B7691D20024A953 /* LoadAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAddressViewController.swift; sourceTree = "<group>"; };
 		8FB229731B730C750063AC7E /* OrderCustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCustomSegue.swift; sourceTree = "<group>"; };
 		8FB229751B7312DC0063AC7E /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		8FB229771B7427250063AC7E /* DismisOrderCustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismisOrderCustomSegue.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				8FA5DFDC1B61C2060007D241 /* AddLocationView.swift */,
 				8FB95D851B70751D00E356C5 /* LocationsViewController.swift */,
 				8FB229751B7312DC0063AC7E /* OrderViewController.swift */,
+				8FA9C1791B7691D20024A953 /* LoadAddressViewController.swift */,
 				71FD42531B743DC000D2F79E /* PebbleController.swift */,
 				8FA5DFDE1B61C8790007D241 /* AddLocationView.xib */,
 				8FB95D811B70630A00E356C5 /* AddressView.xib */,
@@ -365,6 +368,7 @@
 				8FB2297A1B7460570063AC7E /* Order.swift in Sources */,
 				8FB229761B7312DC0063AC7E /* OrderViewController.swift in Sources */,
 				718F425A1B572957000E0AA2 /* SecondViewController.swift in Sources */,
+				8FA9C17A1B7691D20024A953 /* LoadAddressViewController.swift in Sources */,
 				718F42561B572957000E0AA2 /* AppDelegate.swift in Sources */,
 				8FA5DFE11B63EA780007D241 /* UIColorExtension.swift in Sources */,
 				8FB229781B7427250063AC7E /* DismisOrderCustomSegue.swift in Sources */,
