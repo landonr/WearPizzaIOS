@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <VariablesViewState
    version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "WearPizzaIOS.OrderViewController.tableView (WearPizzaIOS.OrderViewController)(ObjectiveC.UITableView, cellForRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ObjectiveC.UITableViewCell:OrderViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedToppingIndex as! Array&lt;NSIndexPath&gt;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
 </VariablesViewState>

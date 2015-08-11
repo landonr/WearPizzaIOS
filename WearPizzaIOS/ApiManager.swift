@@ -57,14 +57,37 @@ class ApiManager {
             for (key: String, subJson: JSON) in toppingJson {
                 var newTopping : Topping = Topping()
                 newTopping.initWithJSON(subJson)
-                newTopping.toRequestDictionary(1, index:1)
-
-                toppingArray.append(newTopping)
+                if newTopping.code != "X" && newTopping.code != "C" {
+                    toppingArray.append(newTopping)
+                }
             }
             let userDefaults = NSUserDefaults.standardUserDefaults()
             userDefaults.setValue(Topping().arrayToGeneric(toppingArray), forKey: "toppingArray")
             userDefaults.synchronize()
             callback(toppingArray)
+        })
+    }
+    
+    func priceOrder(store: Store, address: Address, pizzas: [Pizza], callback : (String)->Void) {
+        var order = Order().initWithAddressAndPizzaAndStore(address, pizzas: pizzas, store:store)
+        var asData = NSJSONSerialization.dataWithJSONObject(order, options:NSJSONWritingOptions(0), error: nil)
+        var jsonString = NSString(data: asData!, encoding: NSUTF8StringEncoding)
+        var fixedString = jsonString!.stringByReplacingOccurrencesOfString("\\", withString: "")
+        println(fixedString)
+        
+        
+        var url = pza + "price-order"
+        let request = api.createPostRequest(NSURL(string: url)!, data: order)
+        //println(request)
+        //queryDictionary(url, queryDictionary: address)
+        
+        api.makeRequestDictionary(request, callback:  { (result : Dictionary<String, AnyObject>) -> Void in
+            var json = JSON(result)
+            var amount = "0"
+            if json["Order"]["AmountsBreakdown"]["Customer"] != nil {
+                amount = json["Order"]["AmountsBreakdown"]["Customer"].stringValue
+            }
+            callback(amount)
         })
     }
 }

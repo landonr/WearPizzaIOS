@@ -79,7 +79,6 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
             self.addLocationView.loadStoresWithAddress(self.addressList[0])
         }
         self.addLocationView.fetchNewLocations()
-
         self.view.bringSubviewToFront(self.navigationBar)
     }
     

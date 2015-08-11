@@ -4,6 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="fenice.ttf">
+            <string>FeniceLT-RegularOblique</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="xiv-ce-eOW">
@@ -489,7 +494,7 @@
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="0.17000000000000001" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToppingCell" rowHeight="64" id="lkA-zq-1w9" customClass="ToppingCell" customModule="WearPizzaIOS" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToppingCell" rowHeight="64" id="lkA-zq-1w9" customClass="ToppingCell" customModule="WearPizzaIOS" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lkA-zq-1w9" id="UBy-1C-iiH">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -604,10 +609,10 @@
             </objects>
             <point key="canvasLocation" x="1238" y="-322"/>
         </scene>
-        <!--View Controller-->
+        <!--Price Check View Controller-->
         <scene sceneID="z9x-IY-jjo">
             <objects>
-                <viewController id="HGe-3T-LkH" sceneMemberID="viewController">
+                <viewController id="HGe-3T-LkH" customClass="PriceCheckViewController" customModule="WearPizzaIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gnd-Dm-mJW"/>
                         <viewControllerLayoutGuide type="bottom" id="7Wb-5f-rvq"/>
@@ -616,7 +621,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LhP-wb-sgs">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LhP-wb-sgs">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                 <color key="backgroundColor" red="0.67843137249999996" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -631,18 +636,133 @@
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="fLO-TU-rvh">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <segue destination="50O-xO-6Ks" kind="custom" customClass="DismsiOrderCustomSegue" customModule="WearPizzaIOS" customModuleProvider="target" id="O5h-MM-Z7L"/>
+                                                <segue destination="50O-xO-6Ks" kind="custom" identifier="ReturnToOrder" customClass="DismsiOrderCustomSegue" customModule="WearPizzaIOS" customModuleProvider="target" id="O5h-MM-Z7L"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="riH-rH-a1T">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="orderPressed" destination="HGe-3T-LkH" id="6py-uy-Ch4"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lA9-Vp-Jga">
+                                <rect key="frame" x="20" y="86" width="236" height="59"/>
+                                <fontDescription key="fontDescription" name="FeniceLT-RegularOblique" family="ITCFenice LT Regular" pointSize="51"/>
+                                <color key="textColor" red="0.67843137249999996" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGd-Jh-PLq">
+                                <rect key="frame" x="16" y="144" width="528" height="1"/>
+                                <color key="backgroundColor" red="0.67843137249999996" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Fb2-6p-KO5"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiO-vj-TgJ">
+                                <rect key="frame" x="16" y="189" width="528" height="1"/>
+                                <color key="backgroundColor" red="0.67843137249999996" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="CdB-PA-LeQ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="uoJ-cP-kwd"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firstname Lastname, 123 Address, City, Provice. Phone Number" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJX-0L-fum">
+                                <rect key="frame" x="20" y="163" width="568" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="sxg-UI-zEi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.67843137249999996" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sxg-UI-zEi"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9Dx-TX-mW6">
+                                <rect key="frame" x="0.0" y="210" width="600" height="390"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PizzaCell" id="fxk-iz-38N" customClass="PizzaCell" customModule="WearPizzaIOS" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fxk-iz-38N" id="PIN-Vc-dGr">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16&quot;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fv-hs-j6d">
+                                                    <rect key="frame" x="8" y="15" width="50" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="NQH-jD-a1Y"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pepperoni, Cheese, Ham" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnT-r8-uiZ">
+                                                    <rect key="frame" x="98" y="6" width="488" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="1fv-hs-j6d" secondAttribute="centerY" id="7AF-Xs-rZQ"/>
+                                                <constraint firstItem="vnT-r8-uiZ" firstAttribute="leading" secondItem="1fv-hs-j6d" secondAttribute="trailing" constant="40" id="CKx-YW-TLI"/>
+                                                <constraint firstItem="vnT-r8-uiZ" firstAttribute="top" secondItem="PIN-Vc-dGr" secondAttribute="topMargin" constant="-2" id="CxE-5I-I8V"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vnT-r8-uiZ" secondAttribute="trailing" constant="6" id="cMn-Zp-2Wq"/>
+                                                <constraint firstItem="1fv-hs-j6d" firstAttribute="leading" secondItem="PIN-Vc-dGr" secondAttribute="leadingMargin" id="slp-6R-JiA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pizzaLabel" destination="vnT-r8-uiZ" id="POV-AO-BlE"/>
+                                            <outlet property="sizeLabel" destination="1fv-hs-j6d" id="VI9-nP-5mW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HGe-3T-LkH" id="xoT-jl-qiB"/>
+                                    <outlet property="delegate" destination="HGe-3T-LkH" id="pyD-GS-exW"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeZ-s4-yYL">
+                                <rect key="frame" x="548" y="110" width="40" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.67843137249999996" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BGd-Jh-PLq" firstAttribute="top" secondItem="LhP-wb-sgs" secondAttribute="bottom" constant="80" id="0ej-Ie-5hC"/>
+                            <constraint firstItem="LhP-wb-sgs" firstAttribute="top" secondItem="uPf-Sa-VDf" secondAttribute="topMargin" id="3D7-w4-MTU"/>
+                            <constraint firstItem="fJX-0L-fum" firstAttribute="leading" secondItem="uPf-Sa-VDf" secondAttribute="leadingMargin" constant="4" id="3YI-M5-12D"/>
+                            <constraint firstItem="UiO-vj-TgJ" firstAttribute="top" secondItem="fJX-0L-fum" secondAttribute="bottom" constant="6" id="3eN-b2-9pC"/>
+                            <constraint firstItem="9Dx-TX-mW6" firstAttribute="leading" secondItem="uPf-Sa-VDf" secondAttribute="leadingMargin" constant="-16" id="4wN-vU-Gni"/>
+                            <constraint firstItem="BGd-Jh-PLq" firstAttribute="leading" secondItem="uPf-Sa-VDf" secondAttribute="leadingMargin" id="BZd-6n-0ck"/>
+                            <constraint firstItem="7Wb-5f-rvq" firstAttribute="top" secondItem="9Dx-TX-mW6" secondAttribute="bottom" id="CeF-JW-VZJ"/>
+                            <constraint firstItem="fJX-0L-fum" firstAttribute="trailing" secondItem="uPf-Sa-VDf" secondAttribute="trailingMargin" constant="4" id="Gmj-bU-IE3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Dx-TX-mW6" secondAttribute="trailing" constant="-16" id="J6p-nc-MQM"/>
+                            <constraint firstItem="9Dx-TX-mW6" firstAttribute="top" secondItem="UiO-vj-TgJ" secondAttribute="bottom" constant="20" id="PGk-9Q-gSI"/>
+                            <constraint firstItem="lA9-Vp-Jga" firstAttribute="leading" secondItem="uPf-Sa-VDf" secondAttribute="leadingMargin" constant="4" id="UvT-T2-K98"/>
+                            <constraint firstItem="UiO-vj-TgJ" firstAttribute="leading" secondItem="uPf-Sa-VDf" secondAttribute="leadingMargin" id="Vjy-1J-hRS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UeZ-s4-yYL" secondAttribute="trailing" constant="-4" id="bpA-6m-eyJ"/>
+                            <constraint firstItem="fJX-0L-fum" firstAttribute="top" secondItem="UeZ-s4-yYL" secondAttribute="bottom" constant="24" id="c3g-8a-PkZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BGd-Jh-PLq" secondAttribute="trailing" constant="40" id="dMv-5i-8Gf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LhP-wb-sgs" secondAttribute="trailing" constant="-16" id="iDr-UW-IOJ"/>
+                            <constraint firstItem="LhP-wb-sgs" firstAttribute="leading" secondItem="uPf-Sa-VDf" secondAttribute="leadingMargin" constant="-16" id="o81-kZ-riN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UiO-vj-TgJ" secondAttribute="trailing" constant="40" id="s8e-qB-C0F"/>
+                            <constraint firstItem="lA9-Vp-Jga" firstAttribute="top" secondItem="LhP-wb-sgs" secondAttribute="bottom" constant="22" id="sXg-UP-QFC"/>
+                            <constraint firstItem="fJX-0L-fum" firstAttribute="top" secondItem="lA9-Vp-Jga" secondAttribute="bottom" constant="18" id="syr-7c-qSl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="fJX-0L-fum" id="wnR-0j-Oq4"/>
+                        <outlet property="pizzaTable" destination="9Dx-TX-mW6" id="eI4-we-acL"/>
+                        <outlet property="priceLabel" destination="UeZ-s4-yYL" id="KnM-bU-y9m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWQ-5F-dOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -654,7 +774,7 @@
         <image name="locationsButton" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="s0n-mE-SwR"/>
         <segue reference="O5h-MM-Z7L"/>
+        <segue reference="29A-UJ-EPD"/>
     </inferredMetricsTieBreakers>
 </document>

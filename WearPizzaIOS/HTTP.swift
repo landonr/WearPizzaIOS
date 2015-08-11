@@ -29,6 +29,13 @@ public class HTTP : NSObject {
         return createRequest(request)
     }
     
+    func createPostRequest(URL : NSURL, jsonData : String) -> NSMutableURLRequest {
+        var request = NSMutableURLRequest(URL: URL)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = jsonData.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        return createRequest(request)
+    }
+    
     func createPostRequest(URL : NSURL, data : Dictionary<String, AnyObject>) -> NSMutableURLRequest {
         var request = NSMutableURLRequest(URL: URL)
         request.HTTPMethod = "POST"

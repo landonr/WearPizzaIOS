@@ -103,7 +103,7 @@ class LoadAddressViewController: UIViewController, UITableViewDelegate, CLLocati
         if status == CLAuthorizationStatus.AuthorizedWhenInUse {
             locationManger.startUpdatingLocation()
         } else {
-            
+            self.showRoughAddress(Address())
         }
     }
     

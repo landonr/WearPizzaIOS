@@ -70,9 +70,34 @@ public class Pizza: NSObject {
     public var toppings: [Topping] = []
     public var size: String = "12"
     
+    public func toppingsToString() -> String
+    {
+        var returnString = ""
+        if self.toppings.count == 0 {
+            returnString += "Cheese"
+        } else {
+            for var i = 0; i < self.toppings.count; i++ {
+                if( i > 0) {
+                    if i == self.toppings.count - 1 {
+                        returnString += ", and "
+                    } else {
+                        returnString += ", "
+                    }
+                }
+                returnString += self.toppings[i].name
+            }
+        }
+        return returnString
+    }
+    
+    public func toDisplayString() -> String {
+        var returnString = self.size + "\" " + self.toppingsToString()
+        return returnString
+    }
+    
     public func initWithToppingsAndSize(newToppings : [Topping], newSize: String) -> Void
     {
         toppings = newToppings
-        size = newSize
+        size = newSize + "\""
     }
 }

@@ -33,6 +33,8 @@
 		8FB95D841B7067C100E356C5 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB95D831B7067C100E356C5 /* AddressView.swift */; };
 		8FB95D861B70751D00E356C5 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB95D851B70751D00E356C5 /* LocationsViewController.swift */; };
 		8FB95D881B7187AC00E356C5 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB95D871B7187AC00E356C5 /* Pizza.swift */; };
+		8FC1D0111B79969800E2CDD5 /* fenice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FC1D00E1B79914900E2CDD5 /* fenice.ttf */; };
+		8FC1D0131B79970D00E2CDD5 /* PriceCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC1D0121B79970D00E2CDD5 /* PriceCheckViewController.swift */; };
 		CB0B7CB127D3FBA071949D9F /* Pods_WearPizzaIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501367CF39049CE66828BB7 /* Pods_WearPizzaIOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,8 @@
 		8FB95D831B7067C100E356C5 /* AddressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		8FB95D851B70751D00E356C5 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		8FB95D871B7187AC00E356C5 /* Pizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		8FC1D00E1B79914900E2CDD5 /* fenice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fenice.ttf; sourceTree = "<group>"; };
+		8FC1D0121B79970D00E2CDD5 /* PriceCheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceCheckViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 				8FA5DFDC1B61C2060007D241 /* AddLocationView.swift */,
 				8FB95D851B70751D00E356C5 /* LocationsViewController.swift */,
 				8FB229751B7312DC0063AC7E /* OrderViewController.swift */,
+				8FC1D0121B79970D00E2CDD5 /* PriceCheckViewController.swift */,
 				8FA9C1791B7691D20024A953 /* LoadAddressViewController.swift */,
 				71FD42531B743DC000D2F79E /* PebbleController.swift */,
 				8FA5DFDE1B61C8790007D241 /* AddLocationView.xib */,
@@ -166,6 +171,7 @@
 		718F42531B572957000E0AA2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8FC1D00E1B79914900E2CDD5 /* fenice.ttf */,
 				718F42541B572957000E0AA2 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -297,6 +303,7 @@
 				8FA5DFDF1B61C8790007D241 /* AddLocationView.xib in Resources */,
 				8FB95D821B70630A00E356C5 /* AddressView.xib in Resources */,
 				718F42621B572957000E0AA2 /* LaunchScreen.xib in Resources */,
+				8FC1D0111B79969800E2CDD5 /* fenice.ttf in Resources */,
 				718F425F1B572957000E0AA2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +377,7 @@
 				718F425A1B572957000E0AA2 /* SecondViewController.swift in Sources */,
 				8FA9C17A1B7691D20024A953 /* LoadAddressViewController.swift in Sources */,
 				718F42561B572957000E0AA2 /* AppDelegate.swift in Sources */,
+				8FC1D0131B79970D00E2CDD5 /* PriceCheckViewController.swift in Sources */,
 				8FA5DFE11B63EA780007D241 /* UIColorExtension.swift in Sources */,
 				8FB229781B7427250063AC7E /* DismisOrderCustomSegue.swift in Sources */,
 				71A2FA381B69D67F0095D047 /* Store.swift in Sources */,

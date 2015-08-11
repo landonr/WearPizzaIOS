@@ -25,9 +25,9 @@ public class Order: NSObject {
         var pizzaList:Array<AnyObject> = []
         for pizza in pizzas
         {
-            var pizzaCode = String(pizza.size) + "SCREEN"
+            var pizzaCode = "12SCREEN"
             
-            var pizzaToppings:Dictionary<String, Dictionary<String, String>> = ["C": ["1/1": "1"]]
+            var pizzaToppings:Dictionary<String, Dictionary<String, String>> = ["C": ["1/1": "1"], "X": ["1/1": "1"]]
             var count = pizza.toppings.count
             var index = 1
             for topping in pizza.toppings {
