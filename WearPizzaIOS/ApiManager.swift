@@ -35,7 +35,7 @@ class ApiManager {
                 newStore.initWithJSON(subJson)
                 storeArray.append(newStore)
             }
-            let userDefaults = NSUserDefaults.standardUserDefaults()
+            let userDefaults = NSUserDefaults(suiteName: "group.wearpizza")!
             userDefaults.setValue(Store().arrayToGeneric(storeArray), forKey: "storeArray")
             userDefaults.synchronize()
             callback(storeArray)
@@ -61,7 +61,7 @@ class ApiManager {
                     toppingArray.append(newTopping)
                 }
             }
-            let userDefaults = NSUserDefaults.standardUserDefaults()
+            let userDefaults = NSUserDefaults(suiteName: "group.wearpizza")!
             userDefaults.setValue(Topping().arrayToGeneric(toppingArray), forKey: "toppingArray")
             userDefaults.synchronize()
             callback(toppingArray)
@@ -89,5 +89,31 @@ class ApiManager {
             }
             callback(amount)
         })
+    }
+    
+    func postOrder(store: Store, address: Address, pizzas: [Pizza], amount: String, callback : (Bool)->Void) {
+        var order = Order().initWithAddressAndPizzaAndStoreAndPrice(address, pizzas: pizzas, store:store, price:amount)
+        var asData = NSJSONSerialization.dataWithJSONObject(order, options:NSJSONWritingOptions(0), error: nil)
+        var jsonString = NSString(data: asData!, encoding: NSUTF8StringEncoding)
+        var fixedString = jsonString!.stringByReplacingOccurrencesOfString("\\", withString: "")
+        println(fixedString)
+        
+        
+        var url = pza + "place-order"
+        let request = api.createPostRequest(NSURL(string: url)!, data: order)
+        //println(request)
+        //queryDictionary(url, queryDictionary: address)
+        println(request)
+        
+        api.makeRequestDictionary(request, callback:  { (result : Dictionary<String, AnyObject>) -> Void in
+            var json = JSON(result)
+            var status = json["Status"]
+            if(status == "1"){
+                callback(true)
+            } else {
+                callback(false)
+            }
+        })
+        
     }
 }

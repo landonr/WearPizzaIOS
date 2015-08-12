@@ -19,6 +19,18 @@
 		8F1437281B674621005E1D8C /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1437261B674621005E1D8C /* HTTP.swift */; };
 		8F1437291B674621005E1D8C /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1437271B674621005E1D8C /* ApiManager.swift */; };
 		8F3E80121B6E147100D4A773 /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3E80111B6E147100D4A773 /* StoreCell.xib */; };
+		8F8646E81B7AB80600E3CDE1 /* Settings-Watch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F8646E71B7AB80600E3CDE1 /* Settings-Watch.bundle */; };
+		8F8646EA1B7AB88E00E3CDE1 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8646E91B7AB88E00E3CDE1 /* WatchKit.framework */; };
+		8F8646F61B7AB95300E3CDE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8646F51B7AB95300E3CDE1 /* Images.xcassets */; };
+		8F8646FA1B7AB95300E3CDE1 /* WearPizzaIOS WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 8F8646F91B7AB95300E3CDE1 /* WearPizzaIOS WatchKit App.app */; };
+		8F8647021B7AB95300E3CDE1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8647001B7AB95300E3CDE1 /* Interface.storyboard */; };
+		8F8647041B7AB95300E3CDE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8647031B7AB95300E3CDE1 /* Images.xcassets */; };
+		8F8647071B7AB95300E3CDE1 /* WearPizzaIOS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8F8646EF1B7AB95300E3CDE1 /* WearPizzaIOS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8F8647121B7ABE6500E3CDE1 /* AppleWatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F86470F1B7ABA3200E3CDE1 /* AppleWatchController.swift */; };
+		8F8647141B7AC1FD00E3CDE1 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2FA371B69D67F0095D047 /* Store.swift */; };
+		8F8647151B7AC1FD00E3CDE1 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB95D871B7187AC00E356C5 /* Pizza.swift */; };
+		8F8647161B7AC1FD00E3CDE1 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB95D7F1B6EE3D700E356C5 /* Address.swift */; };
+		8F8647171B7AC1FD00E3CDE1 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB229791B7460570063AC7E /* Order.swift */; };
 		8FA5DFDB1B5F2D390007D241 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA5DFDA1B5F2D390007D241 /* MapKit.framework */; };
 		8FA5DFDD1B61C2060007D241 /* AddLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA5DFDC1B61C2060007D241 /* AddLocationView.swift */; };
 		8FA5DFDF1B61C8790007D241 /* AddLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA5DFDE1B61C8790007D241 /* AddLocationView.xib */; };
@@ -46,7 +58,35 @@
 			remoteGlobalIDString = 718F424F1B572957000E0AA2;
 			remoteInfo = WearPizzaIOS;
 		};
+		8F8646FB1B7AB95300E3CDE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 718F42481B572957000E0AA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F8646F81B7AB95300E3CDE1;
+			remoteInfo = "WearPizzaIOS WatchKit App";
+		};
+		8F8647051B7AB95300E3CDE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 718F42481B572957000E0AA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F8646EE1B7AB95300E3CDE1;
+			remoteInfo = "WearPizzaIOS WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8F86470E1B7AB95300E3CDE1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8F8647071B7AB95300E3CDE1 /* WearPizzaIOS WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5501367CF39049CE66828BB7 /* Pods_WearPizzaIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WearPizzaIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +109,18 @@
 		8F1437261B674621005E1D8C /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		8F1437271B674621005E1D8C /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		8F3E80111B6E147100D4A773 /* StoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreCell.xib; sourceTree = "<group>"; };
+		8F8646E71B7AB80600E3CDE1 /* Settings-Watch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "Settings-Watch.bundle"; sourceTree = "<group>"; };
+		8F8646E91B7AB88E00E3CDE1 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		8F8646EF1B7AB95300E3CDE1 /* WearPizzaIOS WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WearPizzaIOS WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F8646F21B7AB95300E3CDE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F8646F51B7AB95300E3CDE1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8F8646F91B7AB95300E3CDE1 /* WearPizzaIOS WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WearPizzaIOS WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F8646FF1B7AB95300E3CDE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F8647011B7AB95300E3CDE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		8F8647031B7AB95300E3CDE1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8F86470F1B7ABA3200E3CDE1 /* AppleWatchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleWatchController.swift; path = ../WearPizzaIOS/AppleWatchController.swift; sourceTree = "<group>"; };
+		8F8647111B7ABBF100E3CDE1 /* WearPizzaIOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WearPizzaIOS.entitlements; sourceTree = "<group>"; };
+		8F8647131B7AC01000E3CDE1 /* WearPizzaIOS WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WearPizzaIOS WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		8FA5DFDA1B5F2D390007D241 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8FA5DFDC1B61C2060007D241 /* AddLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationView.swift; sourceTree = "<group>"; };
 		8FA5DFDE1B61C8790007D241 /* AddLocationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLocationView.xib; sourceTree = "<group>"; };
@@ -92,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8646EA1B7AB88E00E3CDE1 /* WatchKit.framework in Frameworks */,
 				71FD42571B744FE800D2F79E /* ExternalAccessory.framework in Frameworks */,
 				8FA5DFDB1B5F2D390007D241 /* MapKit.framework in Frameworks */,
 				CB0B7CB127D3FBA071949D9F /* Pods_WearPizzaIOS.framework in Frameworks */,
@@ -105,12 +158,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8F8646EC1B7AB95300E3CDE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		6E4EC2A0AFFCC941DEB6A6D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F8646E91B7AB88E00E3CDE1 /* WatchKit.framework */,
 				71FD42561B744FE800D2F79E /* ExternalAccessory.framework */,
 				5501367CF39049CE66828BB7 /* Pods_WearPizzaIOS.framework */,
 			);
@@ -124,6 +185,8 @@
 				8FA5DFDA1B5F2D390007D241 /* MapKit.framework */,
 				718F42521B572957000E0AA2 /* WearPizzaIOS */,
 				718F426A1B572957000E0AA2 /* WearPizzaIOSTests */,
+				8F8646F01B7AB95300E3CDE1 /* WearPizzaIOS WatchKit Extension */,
+				8F8646FD1B7AB95300E3CDE1 /* WearPizzaIOS WatchKit App */,
 				718F42511B572957000E0AA2 /* Products */,
 				7353FC2F20FD0C8A3D0E4B8C /* Pods */,
 				6E4EC2A0AFFCC941DEB6A6D6 /* Frameworks */,
@@ -135,6 +198,8 @@
 			children = (
 				718F42501B572957000E0AA2 /* WearPizzaIOS.app */,
 				718F42671B572957000E0AA2 /* WearPizzaIOSTests.xctest */,
+				8F8646EF1B7AB95300E3CDE1 /* WearPizzaIOS WatchKit Extension.appex */,
+				8F8646F91B7AB95300E3CDE1 /* WearPizzaIOS WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +207,7 @@
 		718F42521B572957000E0AA2 /* WearPizzaIOS */ = {
 			isa = PBXGroup;
 			children = (
+				8F8647111B7ABBF100E3CDE1 /* WearPizzaIOS.entitlements */,
 				71A2FA361B69D5BF0095D047 /* Models */,
 				8F1437261B674621005E1D8C /* HTTP.swift */,
 				8F1437271B674621005E1D8C /* ApiManager.swift */,
@@ -163,6 +229,7 @@
 				718F425B1B572957000E0AA2 /* Main.storyboard */,
 				718F425E1B572957000E0AA2 /* Images.xcassets */,
 				718F42601B572957000E0AA2 /* LaunchScreen.xib */,
+				8F8646E71B7AB80600E3CDE1 /* Settings-Watch.bundle */,
 				718F42531B572957000E0AA2 /* Supporting Files */,
 			);
 			path = WearPizzaIOS;
@@ -214,6 +281,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8F8646F01B7AB95300E3CDE1 /* WearPizzaIOS WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8F8647131B7AC01000E3CDE1 /* WearPizzaIOS WatchKit Extension.entitlements */,
+				8F86470F1B7ABA3200E3CDE1 /* AppleWatchController.swift */,
+				8F8646F51B7AB95300E3CDE1 /* Images.xcassets */,
+				8F8646F11B7AB95300E3CDE1 /* Supporting Files */,
+			);
+			path = "WearPizzaIOS WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		8F8646F11B7AB95300E3CDE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F8646F21B7AB95300E3CDE1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8F8646FD1B7AB95300E3CDE1 /* WearPizzaIOS WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				8F8647001B7AB95300E3CDE1 /* Interface.storyboard */,
+				8F8647031B7AB95300E3CDE1 /* Images.xcassets */,
+				8F8646FE1B7AB95300E3CDE1 /* Supporting Files */,
+			);
+			path = "WearPizzaIOS WatchKit App";
+			sourceTree = "<group>";
+		};
+		8F8646FE1B7AB95300E3CDE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F8646FF1B7AB95300E3CDE1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,10 +331,12 @@
 				718F424E1B572957000E0AA2 /* Resources */,
 				D448D15785787E23E3C27A34 /* Embed Pods Frameworks */,
 				01E3F9D1513F6B56488BDCBB /* Copy Pods Resources */,
+				8F86470E1B7AB95300E3CDE1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8F8647061B7AB95300E3CDE1 /* PBXTargetDependency */,
 			);
 			name = WearPizzaIOS;
 			productName = WearPizzaIOS;
@@ -255,6 +361,39 @@
 			productReference = 718F42671B572957000E0AA2 /* WearPizzaIOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8F8646EE1B7AB95300E3CDE1 /* WearPizzaIOS WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F86470B1B7AB95300E3CDE1 /* Build configuration list for PBXNativeTarget "WearPizzaIOS WatchKit Extension" */;
+			buildPhases = (
+				8F8646EB1B7AB95300E3CDE1 /* Sources */,
+				8F8646EC1B7AB95300E3CDE1 /* Frameworks */,
+				8F8646ED1B7AB95300E3CDE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F8646FC1B7AB95300E3CDE1 /* PBXTargetDependency */,
+			);
+			name = "WearPizzaIOS WatchKit Extension";
+			productName = "WearPizzaIOS WatchKit Extension";
+			productReference = 8F8646EF1B7AB95300E3CDE1 /* WearPizzaIOS WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		8F8646F81B7AB95300E3CDE1 /* WearPizzaIOS WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F8647081B7AB95300E3CDE1 /* Build configuration list for PBXNativeTarget "WearPizzaIOS WatchKit App" */;
+			buildPhases = (
+				8F8646F71B7AB95300E3CDE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WearPizzaIOS WatchKit App";
+			productName = "WearPizzaIOS WatchKit App";
+			productReference = 8F8646F91B7AB95300E3CDE1 /* WearPizzaIOS WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -266,11 +405,28 @@
 				TargetAttributes = {
 					718F424F1B572957000E0AA2 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 4384X88AAP;
+						DevelopmentTeam = 5EK8B36623;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					718F42661B572957000E0AA2 = {
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = 718F424F1B572957000E0AA2;
+					};
+					8F8646EE1B7AB95300E3CDE1 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 5EK8B36623;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					8F8646F81B7AB95300E3CDE1 = {
+						CreatedOnToolsVersion = 6.4;
 					};
 				};
 			};
@@ -289,6 +445,8 @@
 			targets = (
 				718F424F1B572957000E0AA2 /* WearPizzaIOS */,
 				718F42661B572957000E0AA2 /* WearPizzaIOSTests */,
+				8F8646EE1B7AB95300E3CDE1 /* WearPizzaIOS WatchKit Extension */,
+				8F8646F81B7AB95300E3CDE1 /* WearPizzaIOS WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -300,6 +458,7 @@
 			files = (
 				8F3E80121B6E147100D4A773 /* StoreCell.xib in Resources */,
 				718F425D1B572957000E0AA2 /* Main.storyboard in Resources */,
+				8F8646E81B7AB80600E3CDE1 /* Settings-Watch.bundle in Resources */,
 				8FA5DFDF1B61C8790007D241 /* AddLocationView.xib in Resources */,
 				8FB95D821B70630A00E356C5 /* AddressView.xib in Resources */,
 				718F42621B572957000E0AA2 /* LaunchScreen.xib in Resources */,
@@ -312,6 +471,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F8646ED1B7AB95300E3CDE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F8646FA1B7AB95300E3CDE1 /* WearPizzaIOS WatchKit App.app in Resources */,
+				8F8646F61B7AB95300E3CDE1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F8646F71B7AB95300E3CDE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F8647021B7AB95300E3CDE1 /* Interface.storyboard in Resources */,
+				8F8647041B7AB95300E3CDE1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +576,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8F8646EB1B7AB95300E3CDE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F8647121B7ABE6500E3CDE1 /* AppleWatchController.swift in Sources */,
+				8F8647141B7AC1FD00E3CDE1 /* Store.swift in Sources */,
+				8F8647171B7AC1FD00E3CDE1 /* Order.swift in Sources */,
+				8F8647161B7AC1FD00E3CDE1 /* Address.swift in Sources */,
+				8F8647151B7AC1FD00E3CDE1 /* Pizza.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -406,6 +595,16 @@
 			isa = PBXTargetDependency;
 			target = 718F424F1B572957000E0AA2 /* WearPizzaIOS */;
 			targetProxy = 718F42681B572957000E0AA2 /* PBXContainerItemProxy */;
+		};
+		8F8646FC1B7AB95300E3CDE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F8646F81B7AB95300E3CDE1 /* WearPizzaIOS WatchKit App */;
+			targetProxy = 8F8646FB1B7AB95300E3CDE1 /* PBXContainerItemProxy */;
+		};
+		8F8647061B7AB95300E3CDE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F8646EE1B7AB95300E3CDE1 /* WearPizzaIOS WatchKit Extension */;
+			targetProxy = 8F8647051B7AB95300E3CDE1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -424,6 +623,14 @@
 				718F42611B572957000E0AA2 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		8F8647001B7AB95300E3CDE1 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F8647011B7AB95300E3CDE1 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -517,6 +724,7 @@
 			baseConfigurationReference = 55F7EF22489F80D56F56BF9A /* Pods-WearPizzaIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WearPizzaIOS/WearPizzaIOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WearPizzaIOS/Info.plist;
@@ -555,6 +763,7 @@
 			baseConfigurationReference = 6B6F1235574150F464C77E78 /* Pods-WearPizzaIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WearPizzaIOS/WearPizzaIOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WearPizzaIOS/Info.plist;
@@ -622,6 +831,76 @@
 			};
 			name = Release;
 		};
+		8F8647091B7AB95300E3CDE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = WearPizzaIOS_WatchKit_Extension;
+				INFOPLIST_FILE = "WearPizzaIOS WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.4;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		8F86470A1B7AB95300E3CDE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = WearPizzaIOS_WatchKit_Extension;
+				INFOPLIST_FILE = "WearPizzaIOS WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.4;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		8F86470C1B7AB95300E3CDE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WearPizzaIOS WatchKit Extension/WearPizzaIOS WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WearPizzaIOS WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8F86470D1B7AB95300E3CDE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WearPizzaIOS WatchKit Extension/WearPizzaIOS WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "WearPizzaIOS WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -651,6 +930,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		8F8647081B7AB95300E3CDE1 /* Build configuration list for PBXNativeTarget "WearPizzaIOS WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F8647091B7AB95300E3CDE1 /* Debug */,
+				8F86470A1B7AB95300E3CDE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8F86470B1B7AB95300E3CDE1 /* Build configuration list for PBXNativeTarget "WearPizzaIOS WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F86470C1B7AB95300E3CDE1 /* Debug */,
+				8F86470D1B7AB95300E3CDE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

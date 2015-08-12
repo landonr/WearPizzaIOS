@@ -78,11 +78,7 @@ public class Pizza: NSObject {
         } else {
             for var i = 0; i < self.toppings.count; i++ {
                 if( i > 0) {
-                    if i == self.toppings.count - 1 {
-                        returnString += ", and "
-                    } else {
-                        returnString += ", "
-                    }
+                    returnString += " & "
                 }
                 returnString += self.toppings[i].name
             }
@@ -90,9 +86,42 @@ public class Pizza: NSObject {
         return returnString
     }
     
+    public func toDictionary() -> Dictionary<String, AnyObject>
+    {
+        var newDictionary:Dictionary<String, AnyObject> = [
+            "toppings":      Topping().arrayToGeneric(self.toppings),
+            "size":      self.size];
+        return newDictionary
+    }
+    
     public func toDisplayString() -> String {
-        var returnString = self.size + "\" " + self.toppingsToString()
+        var returnString = self.size + " " + self.toppingsToString()
         return returnString
+    }
+    
+    public func arrayToGeneric(pizzaArray: Array<Pizza>) -> Array<Dictionary<String, AnyObject>>
+    {
+        var newArray:Array<Dictionary<String, AnyObject>> = []
+        if pizzaArray.count > 0 {
+            for pizza in pizzaArray {
+                var newDictionary:Dictionary = pizza.toDictionary()
+                newArray.append(newDictionary)
+            }
+        }
+        return newArray
+    }
+    
+    public func genericToArray(pizzaArray: Array<Dictionary<String, AnyObject>>) -> Array<Pizza>
+    {
+        var newArray: Array<Pizza> = []
+        for pizza in pizzaArray {
+            var newPizza = Pizza()
+            newPizza.toppings = Topping().genericToArray(pizza["toppings"] as! Array<Dictionary<String, String>>)
+            newPizza.size = pizza["size"] as! String
+            newArray.append(newPizza)
+        }
+        
+        return newArray
     }
     
     public func initWithToppingsAndSize(newToppings : [Topping], newSize: String) -> Void

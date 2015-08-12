@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>WearPizzaIOS WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>WearPizzaIOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>718F42661B572957000E0AA2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F8646F81B7AB95300E3CDE1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

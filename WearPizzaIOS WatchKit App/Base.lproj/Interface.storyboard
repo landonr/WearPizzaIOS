@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nri-8e-3CQ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--OrderTableView-->
+        <scene sceneID="7bH-Sv-Yee">
+            <objects>
+                <controller identifier="OrderTableView" id="Nri-8e-3CQ" customClass="AppleWatchController" customModule="WearPizzaIOS_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Recent Orders" id="PDf-Ar-QLu"/>
+                        <table alignment="left" id="qfH-A7-Raj">
+                            <items>
+                                <tableRow identifier="OrderRow" id="Rjb-i1-eSO" customClass="OrderRow" customModule="WearPizzaIOS_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="rbL-s9-CM7">
+                                        <items>
+                                            <label width="1" alignment="center" text="$30" textAlignment="right" id="KHg-2y-mes">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                            <label width="1" widthAdjustment="1" alignment="left" text="Label" numberOfLines="7" id="WcZ-eh-oT2">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                            </label>
+                                            <separator alignment="left" alpha="0.0" id="5ct-Q5-r5R"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="detailLabel" destination="WcZ-eh-oT2" id="0ep-pZ-72H"/>
+                                        <outlet property="priceLabel" destination="KHg-2y-mes" id="xll-2D-t2p"/>
+                                        <segue destination="Qv8-RW-C9T" kind="push" identifier="prepareOrder" id="jN3-cB-fFA"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="orderTable" destination="qfH-A7-Raj" id="7jj-um-2nH"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="231" y="299"/>
+        </scene>
+        <!--Place Order Controller-->
+        <scene sceneID="qkB-Q7-7fz">
+            <objects>
+                <controller id="Qv8-RW-C9T" customClass="PlaceOrderController" customModule="WearPizzaIOS_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Are You Sure?" textAlignment="left" id="Qi2-l4-acq">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="center" text="$30" id="bv0-zu-afC">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="center" text="Address" numberOfLines="4" id="3wo-GQ-JTN"/>
+                        <label alignment="center" text="Order" numberOfLines="24" id="cdg-mw-k8E">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <button width="1" alignment="left" title="Order" id="2tu-2C-va7">
+                            <connections>
+                                <action selector="orderPressed" destination="Qv8-RW-C9T" id="t0U-lQ-CNd"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="addressLabel" destination="3wo-GQ-JTN" id="crR-6i-nfQ"/>
+                        <outlet property="detailLabel" destination="cdg-mw-k8E" id="aX5-x5-X7N"/>
+                        <outlet property="priceLabel" destination="bv0-zu-afC" id="Jsb-95-Lgz"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="447" y="302"/>
+        </scene>
+    </scenes>
+</document>

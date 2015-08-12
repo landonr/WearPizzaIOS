@@ -32,7 +32,7 @@ class LoadAddressViewController: UIViewController, UITableViewDelegate, CLLocati
         self.locationTopConstraint.constant = -1000
         self.view.setNeedsUpdateConstraints()
         self.view.layoutIfNeeded()
-        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let userDefaults = NSUserDefaults(suiteName: "group.wearpizza")!
         if let address: AnyObject = userDefaults.valueForKey("address") {
             self.performSegueWithIdentifier("LoadApp", sender: nil)
         } else {
@@ -44,6 +44,7 @@ class LoadAddressViewController: UIViewController, UITableViewDelegate, CLLocati
                 locationManger.requestWhenInUseAuthorization()
             }
         }
+        self.showRoughAddress(Address())
     }
     
     func checkIfContinue()
@@ -72,7 +73,7 @@ class LoadAddressViewController: UIViewController, UITableViewDelegate, CLLocati
     }
     
     @IBAction func didTapContinue() {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let userDefaults = NSUserDefaults(suiteName: "group.wearpizza")!
         userDefaults.setValue(self.userAddress.toDictionary(), forKey: "address")
         userDefaults.synchronize()
         self.performSegueWithIdentifier("LoadApp", sender: nil)
@@ -102,8 +103,6 @@ class LoadAddressViewController: UIViewController, UITableViewDelegate, CLLocati
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == CLAuthorizationStatus.AuthorizedWhenInUse {
             locationManger.startUpdatingLocation()
-        } else {
-            self.showRoughAddress(Address())
         }
     }
     

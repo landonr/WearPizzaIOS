@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "WearPizzaIOS.ApiManager.(postOrder (WearPizzaIOS.ApiManager) -&gt; (WearPizzaIOS.Store, address : WearPizzaIOS.Address, pizzas : Swift.Array&lt;WearPizzaIOS.Pizza&gt;, amount : Swift.String, callback : (Swift.String) -&gt; ()) -&gt; ()).(closure #1):ApiManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "result[&quot;Order&quot;] as! Dictionary&lt;String, AnyObject&gt;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "WearPizzaIOS.OrderViewController.tableView (WearPizzaIOS.OrderViewController)(ObjectiveC.UITableView, cellForRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ObjectiveC.UITableViewCell:OrderViewController.swift">
          <PersistentStrings>
             <PersistentString

@@ -9,18 +9,20 @@
 import UIKit
 import CoreLocation
 
-class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocationManagerDelegate {
+class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocationManagerDelegate, UITableViewDelegate {
     @IBOutlet var locationButton: UIBarButtonItem!
     @IBOutlet var navigationBar: UINavigationBar!
     @IBOutlet var addressScrollView: UIScrollView!
     @IBOutlet var addressScrollViewFrame: UIView!
     @IBOutlet var newOrderView: UIView!
     @IBOutlet var newOrderLabelVerticalOffset: NSLayoutConstraint!
+    @IBOutlet var orderTable: UITableView!
     var addLocationView: AddLocationView!
     var locationViewShowing: Bool!
     var addressList: Array<Address>!
     var addressViewList: Array<AddressView>!
     var toppingList: Array<Topping>!
+    var orderList: Array<Dictionary<String, AnyObject>>!
     var storeList: Array<Store>!
     var orderViewController: OrderViewController!
     var pebbleController : PebbleController!
@@ -29,7 +31,7 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
         super.viewDidLoad()
         
         
-        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let userDefaults = NSUserDefaults(suiteName: "group.wearpizza")!
         if let storeArray: AnyObject = userDefaults.valueForKey("storeArray") {
             var s = storeArray as! Array<Dictionary<String, String>>
             var stores = Store().genericToArray(s)
@@ -41,6 +43,12 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
             var toppings = Topping().genericToArray(t)
             self.toppingList = toppings
         }
+        
+        if let orderArray: AnyObject = userDefaults.valueForKey("orderArray") {
+            var orders = orderArray as! Array<Dictionary<String, AnyObject>>
+            self.orderList = orders
+        }
+        
         
         locationManger.delegate = self
         let authstate = CLLocationManager.authorizationStatus()
@@ -172,3 +180,49 @@ class LocationsViewController: UIViewController, UIScrollViewDelegate, CLLocatio
     }
 }
 
+// MARK: TABLE VIEW STUFF
+extension LocationsViewController {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(self.orderList != nil) {
+            return self.orderList.count
+        } else {
+            return 0
+        }
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var orderCell:OrderCell = self.orderTable.dequeueReusableCellWithIdentifier("OrderCell", forIndexPath: indexPath) as! OrderCell
+        
+        let orderData:Dictionary<String, AnyObject> = self.orderList[indexPath.row]
+        let order = Order().genericToOrder(orderData)
+        orderCell.setOrder(order)
+        return orderCell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+    }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+
+    }
+}
+
+//MARK: ODER CELL
+class OrderCell: UITableViewCell, UITableViewDelegate {
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel!
+
+    func setOrder(order: Order) {
+        self.descriptionLabel.text = ""
+        for var i = 0; i < order.pizzas.count; i++ {
+            var pizza = order.pizzas[i]
+            if(order.pizzas.count > 1 && i < order.pizzas.count && i > 0) {
+                self.descriptionLabel.text = self.descriptionLabel.text! + ", "
+            }
+            self.descriptionLabel.text = self.descriptionLabel.text! + pizza.toDisplayString()
+        }
+        self.priceLabel.text = order.price
+    }
+}

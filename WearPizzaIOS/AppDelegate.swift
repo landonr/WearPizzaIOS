@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WatchKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -40,7 +41,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
+            
+            if let userInfo = userInfo, orderData = userInfo["order"] as? Dictionary<String, AnyObject> {
+                println(orderData)
+                var address = Address()
+                var store = Store()
+                
+                let order = Order().genericToOrder(orderData)
+                
+                let userDefaults = NSUserDefaults(suiteName: "group.wearpizza")!
+                if let addressData: AnyObject = userDefaults.valueForKey("address") {
+                    var a = addressData as! Dictionary<String, String>
+                    var newAddress = Address().genericToDictionary(a)
+                    address = newAddress
+                }
+                
+                if let storeArray: AnyObject = userDefaults.valueForKey("storeArray") {
+                    var s = storeArray as! Array<Dictionary<String, String>>
+                    var stores = Store().genericToArray(s)
+                    store = stores[0]
+                }
+                pza.postOrder(store, address: address, pizzas: order.pizzas, amount: order.price, callback: { (response: Bool) -> Void in
+                    
+                    reply(["status":response])
+                })
+            }
+            
+        reply(["status":false])
+    }
 }
 
